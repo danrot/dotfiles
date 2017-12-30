@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+cd (dirname (status -f))
+pwd
+
+echo 'Creating symlinks...'
+echo ''
+
+echo '~/.gitconfig'
+ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
