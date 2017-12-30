@@ -1,3 +1,4 @@
 set -g fish_user_abbreviations
-source (pwd)/composer/aliases.fish
-source (pwd)/git/aliases.fish
+set dotfiles_root (dirname (dirname (readlink (status -f))))
+source $dotfiles_root/composer/aliases.fish
+source $dotfiles_root/git/aliases.fish
