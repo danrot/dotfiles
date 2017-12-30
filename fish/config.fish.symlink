@@ -1,0 +1,2 @@
+set -g fish_user_abbreviations
+source (pwd)/git/aliases.fish

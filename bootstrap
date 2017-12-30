@@ -8,3 +8,6 @@ echo ''
 
 echo '~/.gitconfig'
 ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
+
+echo '~/.config/fish/config.fish'
+ln -s (pwd)/fish/config.fish.symlink ~/.config/fish/config.fish
