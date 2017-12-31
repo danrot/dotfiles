@@ -1,6 +1,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 call plug#end()
+
+syntax enable
+colorscheme OceanicNext
+
+let g:airline_theme='oceanicnext'
 
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = 'vendor/.*/vendor'
+
