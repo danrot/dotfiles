@@ -3,3 +3,4 @@ Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = 'vendor/.*/vendor'
