@@ -1,0 +1,5 @@
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
+
+let g:ctrlp_max_files = 0

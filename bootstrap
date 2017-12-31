@@ -11,3 +11,6 @@ ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
 
 echo '~/.config/fish/config.fish'
 ln -s (pwd)/fish/config.fish.symlink ~/.config/fish/config.fish
+
+echo '~/.config/nvim/init.vim'
+ln -s (pwd)/nvim/init.vim.symlink ~/.config/nvim/init.vim
