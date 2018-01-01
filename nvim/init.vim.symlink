@@ -8,6 +8,9 @@ call plug#end()
 syntax enable
 colorscheme OceanicNext
 
+set number
+set rnu
+
 let g:airline_theme='oceanicnext'
 
 let g:ctrlp_max_files = 0
