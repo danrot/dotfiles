@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flowtype/vim-flow'
 Plug 'mhartington/oceanic-next'
+Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
@@ -23,5 +24,7 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor)$'
 
 let flow#enable = 0
+
+let g:jsx_ext_required = 0
 
 let g:airline_theme='oceanicnext'
