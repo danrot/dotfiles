@@ -6,11 +6,14 @@ pwd
 echo 'Creating symlinks...'
 echo ''
 
-echo '~/.gitconfig'
-ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
-
 echo '~/.config/fish/config.fish'
 ln -s (pwd)/fish/config.fish.symlink ~/.config/fish/config.fish
 
 echo '~/.config/nvim/init.vim'
 ln -s (pwd)/nvim/init.vim.symlink ~/.config/nvim/init.vim
+
+echo '~/.tmux.conf'
+ln -s (pwd)/tmux/tmux.conf.symlink ~/.tmux.conf
+
+echo '~/.gitconfig'
+ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig

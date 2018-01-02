@@ -4,3 +4,8 @@ set -g fish_user_abbreviations
 set dotfiles_root (dirname (dirname (readlink (status -f))))
 source $dotfiles_root/composer/aliases.fish
 source $dotfiles_root/git/aliases.fish
+
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
