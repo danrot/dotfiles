@@ -10,6 +10,9 @@ call plug#end()
 syntax enable
 colorscheme OceanicNext
 
+set expandtab
+set shiftwidth=4
+
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
