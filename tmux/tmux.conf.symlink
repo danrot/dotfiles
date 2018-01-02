@@ -1,1 +1,2 @@
 set -g mouse on
+set -sg escape-time 0
