@@ -11,6 +11,8 @@ call plug#end()
 syntax enable
 colorscheme OceanicNext
 
+set mouse=a
+
 set expandtab
 set shiftwidth=4
 
