@@ -1,12 +1,10 @@
-set PATH node_modules/.bin vendor/bin $PATH
+set dotfiles_root (dirname (dirname (readlink (status -f))))
+
+source $dotfiles_root/composer/config.fish
+source $dotfiles_root/npm/config.fish
+source $dotfiles_root/tmux/config.fish
 
 set -g fish_user_abbreviations
 abbr --add g 'grep'
-set dotfiles_root (dirname (dirname (readlink (status -f))))
 source $dotfiles_root/composer/aliases.fish
 source $dotfiles_root/git/aliases.fish
-
-if status is-interactive
-and not set -q TMUX
-    exec tmux
-end
