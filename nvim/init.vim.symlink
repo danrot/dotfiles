@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flowtype/vim-flow'
 Plug 'mhartington/oceanic-next'
@@ -22,6 +23,8 @@ set omnifunc=syntaxcomplete#Complete
 
 set number
 set rnu
+
+set updatetime=1000
 
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor)$'
