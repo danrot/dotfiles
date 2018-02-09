@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+set -l fish_functions ~/.config/fish/functions
+
 cd (dirname (status -f))
 pwd
 
@@ -8,6 +10,13 @@ echo ''
 
 echo '~/.config/fish/config.fish'
 ln -s (pwd)/fish/config.fish.symlink ~/.config/fish/config.fish
+
+if [ -d $fish_functions ]
+    echo $fish_functions ' already exists'
+else
+    echo $fish_functions
+    ln -s (pwd)/fish/functions.symlink $fish_functions
+end
 
 echo '~/.config/nvim/init.vim'
 ln -s (pwd)/nvim/init.vim.symlink ~/.config/nvim/init.vim
