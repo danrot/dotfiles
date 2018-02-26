@@ -1,6 +1,12 @@
 set -g mouse on
 set -sg escape-time 0
 
+set -g status-bg green
+set -g status-fg black
+set -g status-right ''
+set -g window-status-current-attr bold
+set -g window-status-current-format '#I:#W'
+
 bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
