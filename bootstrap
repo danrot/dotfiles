@@ -26,3 +26,6 @@ ln -s (pwd)/tmux/tmux.conf.symlink ~/.tmux.conf
 
 echo '~/.gitconfig'
 ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
+
+echo '~/.ackrc'
+ln -s (pwd)/ack/ackrc.symlink ~/.ackrc

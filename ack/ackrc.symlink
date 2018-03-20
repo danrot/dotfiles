@@ -1,0 +1,3 @@
+--type-set=md=.md
+
+--ignore-dir=cache
