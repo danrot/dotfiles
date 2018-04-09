@@ -32,7 +32,7 @@ set rnu
 set updatetime=1000
 
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor)$'
+let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor|var/cache|tests/Resources/cache|tests/app/cache)$'
 
 let flow#enable = 0
 
