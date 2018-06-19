@@ -47,3 +47,6 @@ let g:airline_theme='oceanicnext'
 let g:ale_fixers = {
 \    'javascript': ['eslint']
 \}
+
+nmap <silent> aj :ALENext<cr>
+nmap <silent> ak :ALEPrevious<cr>
