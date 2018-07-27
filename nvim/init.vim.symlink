@@ -49,5 +49,6 @@ let g:ale_fixers = {
 \    'javascript': ['eslint']
 \}
 
-nmap <silent> aj :ALENext<cr>
-nmap <silent> ak :ALEPrevious<cr>
+nmap <silent> fj :ALENext<cr>
+nmap <silent> fk :ALEPrevious<cr>
+nmap <silent> ff :ALEFix<cr>
