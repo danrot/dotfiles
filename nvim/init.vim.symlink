@@ -9,6 +9,7 @@ Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -42,6 +43,9 @@ let g:jsx_ext_required = 0
 let g:vim_markdown_folding_disabled = 1
 
 let delimitMate_expand_cr = 1
+
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/ultisnips']
 
 let g:airline_theme='oceanicnext'
 
