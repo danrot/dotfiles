@@ -4,7 +4,22 @@ endsnippet
 
 snippet di "directory index"
 // @flow
-import ${1:component} from './$1';
+import ${1:Component} from './$1';
 
 export default $1;
+endsnippet
+
+snippet rc "react component"
+// @flow
+import React from 'react';
+
+type Props = {};
+
+export default class ${1:Component} extends React.Component<Props> {
+    render() {
+        return (
+            $0
+        );
+    }
+}
 endsnippet
