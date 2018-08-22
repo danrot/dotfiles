@@ -50,7 +50,8 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/ultisnips']
 let g:airline_theme='oceanicnext'
 
 let g:ale_fixers = {
-\    'javascript': ['eslint']
+\    'javascript': ['eslint'],
+\    'scss': ['stylelint'],
 \}
 
 nmap <silent> fj :ALENext<cr>
