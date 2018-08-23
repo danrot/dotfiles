@@ -2,6 +2,16 @@ snippet cl "console.log(...)"
 console.log($0);
 endsnippet
 
+snippet ir "import React"
+import React from 'react';
+$0
+endsnippet
+
+snippet ie "import Enzyme"
+import {${1:shallow}} from 'enzyme';
+$0
+endsnippet
+
 snippet di "directory index"
 // @flow
 import ${1:Component} from './$1';
@@ -21,6 +31,24 @@ export default class ${1:Component} extends React.Component<Props> {
             $0
         );
     }
+}
+endsnippet
+
+snippet cdm "componentDidMount"
+componentDidMount() {
+    $0
+}
+endsnippet
+
+snippet cdu "componentDidUpdate"
+componentDidUpdate(${1:prevProps: Props}) {
+    $0
+}
+endsnippet
+
+snippet cwu "componentWillUnmount"
+componentWillUnmount() {
+    $0
 }
 endsnippet
 
