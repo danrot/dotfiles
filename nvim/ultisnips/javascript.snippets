@@ -69,4 +69,10 @@ endsnippet
 
 snippet jf "jest.fn()"
 const ${1:spy} = jest.fn();
+$0
+endsnippet
+
+snippet jm "jest.mock()"
+jest.mock('${1:module}', () => ${2:{}});
+$0
 endsnippet
