@@ -6,6 +6,16 @@ snippet ct "console.trace()"
 console.trace();
 endsnippet
 
+snippet isd "import from same directory"
+import ${1:Component} from './$1';
+$0
+endsnippet
+
+snippet ipd "import from parent folder"
+import ${1:Component} from '../$1';
+$0
+endsnippet
+
 snippet ir "import React"
 import React from 'react';
 $0
