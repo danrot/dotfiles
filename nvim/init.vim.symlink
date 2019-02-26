@@ -52,6 +52,8 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/ultisnips']
 
 let g:airline_theme='oceanicnext'
 
+let g:ale_linters_ignore = ['jshint']
+
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    'scss': ['stylelint'],
