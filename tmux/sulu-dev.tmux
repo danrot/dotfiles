@@ -6,4 +6,4 @@ tmux rename-window sulu-dev
 tmux send-keys "nvim ." C-m
 
 tmux split-window -h -c "#{pane_current_path}"
-tmux resize-pane -t 0 -x 124
+tmux resize-pane -t 0 -x 126
