@@ -62,3 +62,8 @@ let g:ale_fixers = {
 nmap <silent> fj :ALENext<cr>
 nmap <silent> fk :ALEPrevious<cr>
 nmap <silent> ff :ALEFix<cr>
+
+command -nargs=+ Ackjs Ack --type=js <args>
+command -nargs=+ Ackphp Ack --type=php <args>
+command -nargs=+ Ackscss Ack --type=scss <args>
+command -nargs=+ Ackmd Ack --type=md <args>
