@@ -64,6 +64,8 @@ nmap <silent> fk :ALEPrevious<cr>
 nmap <silent> ff :ALEFix<cr>
 
 command -nargs=+ Ackjs Ack --type=js <args>
+command -nargs=+ Ackjson Ack --type=json <args>
+command -nargs=+ Ackmd Ack --type=md <args>
 command -nargs=+ Ackphp Ack --type=php <args>
 command -nargs=+ Ackscss Ack --type=scss <args>
-command -nargs=+ Ackmd Ack --type=md <args>
+command -nargs=+ Ackxml Ack --type=xml <args>
