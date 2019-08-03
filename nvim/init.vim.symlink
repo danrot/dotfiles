@@ -8,6 +8,7 @@ Plug 'joonty/vdebug'
 Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -69,3 +70,8 @@ command -nargs=+ Ackmd Ack --type=md <args>
 command -nargs=+ Ackphp Ack --type=php <args>
 command -nargs=+ Ackscss Ack --type=scss <args>
 command -nargs=+ Ackxml Ack --type=xml <args>
+
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+autocmd FileType php nmap <leader>gd :call phpactor#GotoDefinition()<CR>
+
+autocmd FileType javascript nmap <leader>gd :FlowJumpToDef<CR>
