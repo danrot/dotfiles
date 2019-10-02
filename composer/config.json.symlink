@@ -1,0 +1,8 @@
+{
+    "config": {
+        "preferred-install": {
+            "sulu/*": "source",
+            "massive/*": "source"
+        }
+    }
+}

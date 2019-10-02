@@ -29,3 +29,7 @@ ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
 
 echo '~/.ackrc'
 ln -s (pwd)/ack/ackrc.symlink ~/.ackrc
+
+echo '~/.composer/config.json'
+mkdir ~/.composer
+ln -s (pwd)/composer/config.json.symlink ~/.composer/config.json

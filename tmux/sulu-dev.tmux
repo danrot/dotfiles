@@ -1,6 +1,6 @@
 #!/bin/fish
 
-tmux new-window -c ~/Development/sulu/sulu-minimal/vendor/sulu/sulu
+tmux new-window -c ~/Development/sulu/sulu-skeleton/vendor/sulu/sulu
 tmux rename-window sulu-dev
 
 tmux send-keys "nvim ." C-m
