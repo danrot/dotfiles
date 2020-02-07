@@ -10,7 +10,9 @@ Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown'
+Plug 'Quramy/tsuquyomi'
 Plug 'Raimondi/delimitMate'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -30,6 +32,11 @@ set shiftwidth=4
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
+
 set number
 set rnu
 
@@ -46,6 +53,8 @@ let g:jsx_ext_required = 0
 
 let g:vim_markdown_folding_disabled = 1
 
+let g:tsuquyomi_completion_detail = 1
+
 let delimitMate_expand_cr = 1
 
 let g:UltiSnipsExpandTrigger='<tab>'
@@ -54,6 +63,10 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/ultisnips']
 let g:airline_theme='oceanicnext'
 
 let g:ale_linters_ignore = ['jshint']
+
+let g:ale_linters = {
+\    'javascript': ['eslint', 'flow']
+\}
 
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
