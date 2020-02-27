@@ -84,6 +84,14 @@ test('${1:test description}', () => {
 });
 endsnippet
 
+snippet te "jest test each"
+test.each([
+    ${1:['Test1'],}
+])('${2:test description}', (${3:value}) => {
+    $0
+});
+endsnippet
+
 snippet jf "jest.fn()"
 const ${1:spy} = jest.fn();
 endsnippet
