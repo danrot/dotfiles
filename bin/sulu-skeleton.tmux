@@ -1,1 +1,0 @@
-../tmux/sulu-skeleton.tmux
