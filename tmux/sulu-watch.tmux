@@ -1,6 +1,6 @@
 #!/bin/fish
 
-tmux new-window -c ~/Development/sulu/sulu-skeleton/vendor/sulu/sulu
+tmux new-window -c ~/Development/sulu/sulu
 tmux rename-window sulu-watch
 
 tmux split-window -h -c "#{pane_current_path}"
