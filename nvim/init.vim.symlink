@@ -12,6 +12,7 @@ Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown'
 Plug 'Quramy/tsuquyomi'
 Plug 'Raimondi/delimitMate'
+Plug 'rust-lang/rust.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
