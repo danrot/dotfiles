@@ -3,4 +3,4 @@
     name = Daniel Rotter
 
 [tag]
-    sort = version:refname
+    sort = -version:refname
