@@ -1,3 +1,6 @@
 [user]
-	email = daniel.rotter@gmail.com
-	name = Daniel Rotter
+    email = daniel.rotter@gmail.com
+    name = Daniel Rotter
+
+[tag]
+    sort = version:refname
