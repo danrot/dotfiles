@@ -4,3 +4,6 @@
 
 [tag]
     sort = -version:refname
+
+[core]
+    excludesfile = /Users/roda/.gitignore
