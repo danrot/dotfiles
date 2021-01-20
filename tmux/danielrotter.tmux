@@ -1,6 +1,6 @@
-#!/bin/fish
+#!/bin/bash
 
-tmux new-window -c ~/Development/danrot/danrot.github.io
+tmux new-window -c ~/Documents/Development/danrot.github.io
 tmux rename-window danielrotter
 tmux send-keys "nvim ." C-m
 

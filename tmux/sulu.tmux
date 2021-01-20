@@ -1,6 +1,6 @@
-#!/bin/fish
+#!/bin/bash
 
-tmux new-window -c ~/Development/sulu/sulu
+tmux new-window -c ~/Documents/Development/sulu
 tmux rename-window sulu-dev
 
 tmux send-keys "nvim ." C-m
