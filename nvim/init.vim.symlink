@@ -23,6 +23,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
 call plug#end()
 
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
+
 syntax enable
 colorscheme OceanicNext
 
