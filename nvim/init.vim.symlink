@@ -8,6 +8,7 @@ Plug 'joonty/vdebug'
 Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown'
 Plug 'Quramy/tsuquyomi'
