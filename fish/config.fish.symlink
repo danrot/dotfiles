@@ -2,6 +2,7 @@ set dotfiles_root (dirname (dirname (readlink (status -f))))
 
 source $dotfiles_root/bin/config.fish
 source $dotfiles_root/composer/config.fish
+source $dotfiles_root/csharp/config.fish
 source $dotfiles_root/npm/config.fish
 source $dotfiles_root/nvim/config.fish
 source $dotfiles_root/ruby/config.fish
