@@ -3,6 +3,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
 Plug 'flowtype/vim-flow'
 Plug 'joonty/vdebug'
 Plug 'mhartington/oceanic-next'
@@ -52,6 +53,12 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor|var/cache|tests/Resources/cache|tests/app/cache)$'
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+let g:SuperTabDefaultCompletionType = 'context'
+autocmd FileType *
+\ if &omnifunc != '' |
+\   call SuperTabChain(&omnifunc, "<c-p>") |
+\ endif
 
 let flow#enable = 0
 
