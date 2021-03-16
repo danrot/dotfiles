@@ -55,6 +55,7 @@ let g:ctrlp_custom_ignore = '\v(node_modules|vendor/.*/vendor|var/cache|tests/Re
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
+let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabDefaultCompletionType = 'context'
 autocmd FileType *
 \ if &omnifunc != '' |
