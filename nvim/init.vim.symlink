@@ -36,6 +36,7 @@ set mouse=a
 
 set expandtab
 set shiftwidth=4
+set colorcolumn=120
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
