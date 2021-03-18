@@ -108,3 +108,5 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 autocmd FileType php nmap <leader>gd :call phpactor#GotoDefinition()<CR>
 
 autocmd FileType javascript nmap <leader>gd :FlowJumpToDef<CR>
+
+autocmd FileType markdown set tw=119
