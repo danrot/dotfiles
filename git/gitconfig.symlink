@@ -7,3 +7,4 @@
 
 [core]
     excludesfile = /Users/roda/.gitignore
+    autocrlf = true
