@@ -45,6 +45,7 @@ set omnifunc=syntaxcomplete#Complete
 augroup SyntaxSettings
     autocmd!
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+    autocmd BufNewFile,BufRead *.svelte set filetype=html
 augroup END
 
 set number
