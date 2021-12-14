@@ -1,5 +1,6 @@
 set dotfiles_root (dirname (dirname (readlink (status -f))))
 
+source $dotfiles_root/android/config.fish
 source $dotfiles_root/bin/config.fish
 source $dotfiles_root/composer/config.fish
 source $dotfiles_root/csharp/config.fish
