@@ -33,6 +33,9 @@ ln -s (pwd)/git/gitignore.symlink ~/.gitignore
 echo '~/.ackrc'
 ln -s (pwd)/ack/ackrc.symlink ~/.ackrc
 
+echo '~/.editorconfig'
+ln -s (pwd)/nvim/editorconfig.symlink ~/.editorconfig
+
 echo '~/.composer/config.json'
 mkdir ~/.composer
 ln -s (pwd)/composer/config.json.symlink ~/.composer/config.json
