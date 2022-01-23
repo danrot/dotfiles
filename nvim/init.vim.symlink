@@ -83,7 +83,8 @@ let g:airline_theme='deus'
 let g:ale_linters_ignore = ['jshint']
 
 let g:ale_linters = {
-\    'javascript': ['eslint', 'flow']
+\    'javascript': ['eslint', 'flow'],
+\    'json': [],
 \}
 
 let g:ale_fixers = {
