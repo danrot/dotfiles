@@ -69,6 +69,8 @@ let g:vdebug_options = {
 
 let g:jsx_ext_required = 0
 
+let g:OmniSharp_server_use_net6 = 1
+
 let g:vim_markdown_folding_disabled = 1
 
 let g:tsuquyomi_completion_detail = 1
