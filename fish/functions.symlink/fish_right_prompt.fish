@@ -3,7 +3,7 @@ function fish_right_prompt
 
     if [ -n "$is_git_repository" ]
         set_color -o brmagenta
-        echo (git rev-parse --abbrev-ref HEAD)
+        echo (git rev-parse --abbrev-ref HEAD 2>/dev/null)
         set_color normal
     end
 end
