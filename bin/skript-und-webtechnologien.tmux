@@ -1,1 +1,0 @@
-../tmux/skript-und-webtechnologien.tmux
