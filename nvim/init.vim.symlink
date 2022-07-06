@@ -9,7 +9,6 @@ Plug 'flowtype/vim-flow'
 Plug 'joonty/vdebug'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
-Plug 'OmniSharp/omnisharp-vim'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown'
 Plug 'Quramy/tsuquyomi'
@@ -68,8 +67,6 @@ let g:vdebug_options = {
 \}
 
 let g:jsx_ext_required = 0
-
-let g:OmniSharp_server_use_net6 = 1
 
 let g:vim_markdown_folding_disabled = 1
 
