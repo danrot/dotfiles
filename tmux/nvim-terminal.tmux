@@ -2,10 +2,13 @@
 
 tmux rename-window $(basename $1)
 
-tmux send-keys "cd $1" C-m
+tmux split-window -h
 
-tmux split-window -h -c "$1"
+tmux send-keys -t 0 "cd $1" C-m
+tmux send-keys -t 1 "cd $1" C-m
+
 tmux resize-pane -t 0 -x 126
+
 tmux select-pane -t 0
 
 tmux send-keys "nvim ." C-m
