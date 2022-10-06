@@ -101,6 +101,7 @@ command -nargs=+ Ackjson Ack --type=json <args>
 command -nargs=+ Ackmd Ack --type=md <args>
 command -nargs=+ Ackphp Ack --type=php <args>
 command -nargs=+ Ackscss Ack --type=scss <args>
+command -nargs=+ Ackyaml Ack --type=yaml <args>
 command -nargs=+ Ackxml Ack --type=xml <args>
 
 autocmd FileType php setlocal omnifunc=phpactor#Complete
