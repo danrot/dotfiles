@@ -7,6 +7,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'flowtype/vim-flow'
 Plug 'joonty/vdebug'
+Plug 'lumiliet/vim-twig'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
