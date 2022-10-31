@@ -7,7 +7,7 @@ tmux split-window -h
 tmux send-keys -t 0 "cd $1" C-m
 tmux send-keys -t 1 "cd $1" C-m
 
-tmux resize-pane -t 0 -x 126
+tmux resize-pane -t 0 -x 170
 
 tmux select-pane -t 0
 

@@ -6,7 +6,7 @@
     sort = -version:refname
 
 [core]
-    excludesfile = /Users/roda/.gitignore
+    excludesfile = ~/.gitignore
 
 [filter "lfs"]
     clean = git-lfs clean -- %f

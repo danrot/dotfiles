@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 set -l fish_functions ~/.config/fish/functions
+set -l nvim_snippets ~/.config/nvim/snippets
 
 cd (dirname (status -f))
 pwd
@@ -18,8 +19,15 @@ else
     ln -s (pwd)/fish/functions.symlink $fish_functions
 end
 
-echo '~/.config/nvim/init.vim'
-ln -s (pwd)/nvim/init.vim.symlink ~/.config/nvim/init.vim
+echo '~/.config/nvim/init.lua'
+ln -s (pwd)/nvim/init.lua.symlink ~/.config/nvim/init.lua
+
+if [ -d $nvim_snippets ]
+	echo $nvim_snippets ' already exists'
+else
+	echo $nvim_snippets
+	ln -s (pwd)/nvim/snippets $nvim_snippets
+end
 
 echo '~/.tmux.conf'
 ln -s (pwd)/tmux/tmux.conf.symlink ~/.tmux.conf
