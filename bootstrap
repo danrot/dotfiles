@@ -10,17 +10,17 @@ echo 'Creating symlinks...'
 echo ''
 
 echo '~/.config/fish/config.fish'
-ln -s (pwd)/fish/config.fish.symlink ~/.config/fish/config.fish
+ln -s (pwd)/fish/config.fish ~/.config/fish/config.fish
 
 if [ -d $fish_functions ]
     echo $fish_functions ' already exists'
 else
     echo $fish_functions
-    ln -s (pwd)/fish/functions.symlink $fish_functions
+    ln -s (pwd)/fish/functions $fish_functions
 end
 
 echo '~/.config/nvim/init.lua'
-ln -s (pwd)/nvim/init.lua.symlink ~/.config/nvim/init.lua
+ln -s (pwd)/nvim/init.lua ~/.config/nvim/init.lua
 
 if [ -d $nvim_snippets ]
 	echo $nvim_snippets ' already exists'
@@ -30,20 +30,16 @@ else
 end
 
 echo '~/.tmux.conf'
-ln -s (pwd)/tmux/tmux.conf.symlink ~/.tmux.conf
+ln -s (pwd)/tmux/tmux.conf ~/.tmux.conf
 
 echo '~/.gitconfig'
-ln -s (pwd)/git/gitconfig.symlink ~/.gitconfig
+ln -s (pwd)/git/.gitconfig ~/.gitconfig
 
 echo '~/.gitignore'
-ln -s (pwd)/git/gitignore.symlink ~/.gitignore
+ln -s (pwd)/git/.gitignore ~/.gitignore
 
 echo '~/.ackrc'
-ln -s (pwd)/ack/ackrc.symlink ~/.ackrc
+ln -s (pwd)/ack/.ackrc ~/.ackrc
 
 echo '~/.editorconfig'
-ln -s (pwd)/nvim/editorconfig.symlink ~/.editorconfig
-
-echo '~/.composer/config.json'
-mkdir ~/.composer
-ln -s (pwd)/composer/config.json.symlink ~/.composer/config.json
+ln -s (pwd)/nvim/.editorconfig ~/.editorconfig
