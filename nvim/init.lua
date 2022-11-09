@@ -52,7 +52,7 @@ vim.opt.mouse = 'a'
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-require('luasnip.loaders.from_snipmate').lazy_load()
+require('luasnip.loaders.from_lua').lazy_load({ paths = vim.fn.stdpath('config') .. '/snippets' })
 
 cmp.setup({
 	sources = {
