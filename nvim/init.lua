@@ -69,7 +69,6 @@ cmp.setup({
 		['<C-n>'] = cmp.mapping.select_next_item(),
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
 		['<C-d>'] = cmp.mapping.scroll_docs(4),
-		['<C-e>'] = cmp.mapping.scroll_docs(4),
 		['<Cr>'] = cmp.mapping.confirm(),
 		['<Tab>'] = cmp.mapping(function(fallback)
 			if luasnip.jumpable(1) then
@@ -84,6 +83,9 @@ cmp.setup({
 			else
 				fallback()
 			end
+		end, {'i', 's'}),
+		['<C-e>'] = cmp.mapping(function()
+			luasnip.change_choice(1)
 		end, {'i', 's'}),
 	},
 })
