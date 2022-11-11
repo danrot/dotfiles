@@ -37,19 +37,26 @@ function VisibilityChoice(jump_index)
 	)
 end
 
-function Setter(visibility_jump_index, name_jump_index, insert_name)
-	visibility_jump_index = visibility_jump_index or 1;
-	name_jump_index = name_jump_index or 2;
+function Setter(visibility_jump_index, name_jump_index, type_jump_index, insert_name, insert_type)
+	visibility_jump_index = visibility_jump_index or 1
+	name_jump_index = name_jump_index or 2
+	type_jump_index = type_jump_index or 3
 
 	if insert_name == nil then
 		insert_name = true
+	end
+
+	if insert_type == nil then
+		insert_type = true
 	end
 
 	return {
 		VisibilityChoice(visibility_jump_index),
 		t(' function set'),
 		MirrorCapitalized(name_jump_index),
-		t('($'),
+		t('('),
+		insert_type and i(type_jump_index) or Mirror(type_jump_index),
+		t(' $'),
 		Mirror(name_jump_index),
 		t({')', '{', '	$this->'}),
 		insert_name and i(name_jump_index) or Mirror(name_jump_index),
@@ -59,19 +66,26 @@ function Setter(visibility_jump_index, name_jump_index, insert_name)
 	}
 end
 
-function Getter(visibility_jump_index, name_jump_index, insert_name)
-	visibility_jump_index = visibility_jump_index or 1;
-	name_jump_index = name_jump_index or 2;
+function Getter(visibility_jump_index, name_jump_index, type_jump_index, insert_name, insert_type)
+	visibility_jump_index = visibility_jump_index or 1
+	name_jump_index = name_jump_index or 2
+	type_jump_index = type_jump_index or 3
 
 	if insert_name == nil then
 		insert_name = true
+	end
+
+	if insert_type == nil then
+		insert_type = true
 	end
 
 	return {
 		VisibilityChoice(visibility_jump_index),
 		t(' function get'),
 		MirrorCapitalized(name_jump_index),
-		t({'()', '{', '	return $this->'}),
+		t({'(): '}),
+		insert_type and i(type_jump_index) or Mirror(type_jump_index),
+		t({'', '{', '	return $this->'}),
 		insert_name and i(name_jump_index) or Mirror(name_jump_index),
 		t({';', '}', ''}),
 	}
@@ -87,5 +101,5 @@ return {
 	}),
 	s('g', Getter()),
 	s('s', Setter()),
-	s('gs', Concat(Concat(Getter(1, 2), {t({'', ''})}), Setter(3, 2, false))),
+	s('gs', Concat(Concat(Getter(1, 2, 3), {t({'', ''})}), Setter(4, 2, 3, false, false))),
 }
