@@ -78,6 +78,7 @@ function Getter(visibility_jump_index, name_jump_index, insert_name)
 end
 
 return {
+	s('dt', t('declare(strict_types=1);')),
 	s('vd', {
 		t('var_dump('), i(1), t(');')
 	}),
