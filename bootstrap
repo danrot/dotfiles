@@ -9,6 +9,9 @@ pwd
 echo 'Creating symlinks...'
 echo ''
 
+echo '~/.alacritty.yml'
+ln -s (pwd)/alacritty/alacritty.yml ~/.alacritty.yml
+
 echo '~/.config/fish/config.fish'
 ln -s (pwd)/fish/config.fish ~/.config/fish/config.fish
 
