@@ -49,6 +49,8 @@ vim.opt.rnu = true
 
 vim.opt.mouse = 'a'
 
+vim.keymap.set('n', '<C-w>t', '<cmd>tab split<cr>')
+
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
