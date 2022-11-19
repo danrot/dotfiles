@@ -14,6 +14,7 @@ require('packer').startup(function(use)
 	}
 	use 'kylechui/nvim-surround'
 	use 'lewis6991/gitsigns.nvim'
+	use 'mfussenegger/nvim-lint'
 	use 'numToStr/Comment.nvim'
 	use 'nvim-lualine/lualine.nvim'
 	use {
@@ -98,6 +99,21 @@ require('gitsigns').setup()
 
 vim.keymap.set('n', ']c', '<cmd>Gitsign next_hunk<cr>')
 vim.keymap.set('n', '[c', '<cmd>Gitsign prev_hunk<cr>')
+
+local lint = require('lint')
+
+lint.linters_by_ft = {
+	php = { 'psalm' },
+}
+
+vim.api.nvim_create_autocmd(
+	{ 'BufWritePost' },
+	{
+		callback = function()
+			lint.try_lint()
+		end
+	}
+)
 
 local dap = require('dap')
 
