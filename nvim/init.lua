@@ -103,7 +103,12 @@ vim.keymap.set('n', '[c', '<cmd>Gitsign prev_hunk<cr>')
 local lint = require('lint')
 
 lint.linters_by_ft = {
+	css = { 'stylelint' },
+	javascript = { 'eslint' },
 	php = { 'psalm' },
+	scss = { 'stylelint' },
+	typescript = { 'eslint' },
+	vue = { 'eslint' },
 }
 
 vim.api.nvim_create_autocmd(
