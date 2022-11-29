@@ -154,7 +154,26 @@ vim.keymap.set('n', '<F6>', dap.terminate)
 vim.keymap.set('n', '<F10>', dap.toggle_breakpoint)
 
 local dapui = require('dapui')
-dapui.setup()
+dapui.setup({
+	layouts = {
+		{
+			elements = {
+				'stacks',
+				'scopes',
+			},
+			size = 0.25,
+			position = 'bottom',
+		},
+		{
+			elements = {
+				'watches',
+				'breakpoints',
+			},
+			size = 40,
+			position = 'left',
+		},
+	}
+})
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
