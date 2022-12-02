@@ -1,15 +1,18 @@
 [user]
-    email = daniel.rotter@gmail.com
-    name = Daniel Rotter
+	email = daniel.rotter@gmail.com
+	name = Daniel Rotter
 
 [tag]
-    sort = -version:refname
+	sort = -version:refname
 
 [core]
-    excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
+
+[push]
+	autoSetupRemote = true
 
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
