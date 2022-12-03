@@ -38,6 +38,7 @@ require('packer').startup(function(use)
 			{ 'neovim/nvim-lspconfig' },
 		},
 	}
+	use 'windwp/nvim-autopairs'
 end)
 
 vim.g.mapleader = ' '
@@ -216,3 +217,5 @@ vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename)
 vim.keymap.set({'n', 'x'}, '<leader>ca', vim.lsp.buf.code_action)
+
+require('nvim-autopairs').setup()
