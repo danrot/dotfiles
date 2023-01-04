@@ -1,1 +1,1 @@
-set PATH $dotfiles_root/bin $PATH
+fish_add_path $dotfiles_root/bin

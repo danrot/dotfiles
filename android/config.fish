@@ -1,2 +1,2 @@
 set ANDROID_SDK $HOME/Library/Android/sdk
-set PATH /Users/roda/Library/Android/sdk/platform-tools $PATH
+fish_add_path /Users/roda/Library/Android/sdk/platform-tools

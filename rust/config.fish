@@ -1,1 +1,1 @@
-set PATH ~/.cargo/bin $PATH
+fish_add_path ~/.cargo/bin
