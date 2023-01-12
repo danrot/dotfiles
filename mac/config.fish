@@ -1,1 +1,1 @@
-fish_add_path /opt/homebrew/bin
+add_path_if_not_exists /opt/homebrew/bin

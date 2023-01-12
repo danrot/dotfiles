@@ -1,2 +1,2 @@
 set -x N_PREFIX ~/.n
-fish_add_path $N_PREFIX/bin
+add_path_if_not_exists $N_PREFIX/bin

@@ -1,1 +1,1 @@
-fish_add_path ~/.cargo/bin
+add_path_if_not_exists ~/.cargo/bin

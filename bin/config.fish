@@ -1,1 +1,1 @@
-fish_add_path $dotfiles_root/bin
+add_path_if_not_exists $dotfiles_root/bin

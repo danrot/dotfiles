@@ -1,2 +1,2 @@
-fish_add_path node_modules/.bin
-fish_add_path assets/vue/node_modules/.bin
+add_path_if_not_exists node_modules/.bin
+add_path_if_not_exists assets/vue/node_modules/.bin
