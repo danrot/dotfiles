@@ -1,4 +1,0 @@
-alt_send_esc: false
-
-key_bindings:
-    - { key: N, mods: Command, action: CreateNewWindow }

@@ -1,1 +1,0 @@
-../tmux/nvim-terminal.tmux

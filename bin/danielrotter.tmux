@@ -1,1 +1,0 @@
-../tmux/danielrotter.tmux

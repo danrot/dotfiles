@@ -1,0 +1,6 @@
+#!/bin/bash
+kitty @ set-window-title $(basename $1)
+kitty @ launch --cwd $1
+kitty @ focus-window --match "recent:1"
+
+kitty @ send-text --match "recent:0" "cd $1;nvim .\n"
