@@ -46,6 +46,8 @@ vim.g.mapleader = ' '
 vim.opt.termguicolors = true
 vim.cmd('colorscheme desert')
 
+vim.opt.title = true
+
 vim.opt.number = true
 vim.opt.rnu = true
 
