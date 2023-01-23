@@ -1,5 +1,4 @@
 #!/bin/bash
-kitty @ set-window-title $(basename $1)
 kitty @ launch --cwd $1
 kitty @ launch --cwd $1
 kitty @ launch --cwd $1
