@@ -1,4 +1,6 @@
 #!/bin/bash
+kitty @ set-tab-title $(basename $1)
+
 kitty @ launch --cwd $1
 kitty @ focus-window --match "recent:1"
 
