@@ -53,6 +53,8 @@ vim.opt.rnu = true
 
 vim.opt.mouse = 'a'
 
+vim.opt.switchbuf = 'usetab,newtab'
+
 vim.keymap.set('n', '<C-w>t', '<cmd>tab split<cr>')
 
 local cmp = require('cmp')
