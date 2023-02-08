@@ -127,6 +127,8 @@ vim.api.nvim_create_autocmd(
 
 local dap = require('dap')
 
+dap.defaults.fallback.switchbuf = 'uselast'
+
 local xdebug_port = os.getenv('NVIM_XDEBUG_PORT')
 local xdebug_path_server = os.getenv('NVIM_XDEBUG_PATH_SERVER')
 local xdebug_path_local = os.getenv('NVIM_XDEBUG_PATH_LOCAL')
