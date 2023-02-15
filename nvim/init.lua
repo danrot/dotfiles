@@ -133,7 +133,7 @@ local xdebug_port = os.getenv('NVIM_XDEBUG_PORT')
 local xdebug_path_server = os.getenv('NVIM_XDEBUG_PATH_SERVER')
 local xdebug_path_local = os.getenv('NVIM_XDEBUG_PATH_LOCAL')
 
-if (xdebug_port and xdebug_path_server and xdebug_path_local) then
+if (xdebug_port) then
 	dap.adapters.php = {
 		type = 'executable',
 		command = 'node',
@@ -146,9 +146,11 @@ if (xdebug_port and xdebug_path_server and xdebug_path_local) then
 			request = 'launch',
 			name = 'Listen for Xdebug',
 			port = xdebug_port,
-			pathMappings = {
-				[xdebug_path_server] = xdebug_path_local,
-			},
+			pathMappings = xdebug_path_local and xdebug_path_server
+				and {
+					[xdebug_path_server] = xdebug_path_local,
+				}
+				or nil,
 		},
 	}
 end
