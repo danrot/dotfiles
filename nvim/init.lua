@@ -179,7 +179,12 @@ dapui.setup({
 			size = 40,
 			position = 'left',
 		},
-	}
+	},
+	icons = {
+		collapsed = '▶',
+		current_frame = '▶',
+		expanded = '▼',
+	},
 })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
