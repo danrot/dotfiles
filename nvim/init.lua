@@ -226,10 +226,29 @@ require('lualine').setup({
 	}
 })
 
-require('telescope').load_extension('fzf')
+local telescope = require('telescope')
+local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
+telescope.setup{
+	defaults = {
+		vimgrep_arguments = {
+			'rg',
+			'--color=never',
+			'--no-heading',
+			'--with-filename',
+			'--line-number',
+			'--column',
+			'--smart-case',
+			'--no-ignore',
+		},
+	},
+}
+
+telescope.load_extension('fzf')
+
+
+vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ no_ignore = true, hidden = true } end)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 
 require('mason').setup()
 require('mason-lspconfig').setup()
