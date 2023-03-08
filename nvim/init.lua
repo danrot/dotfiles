@@ -231,6 +231,7 @@ local builtin = require('telescope.builtin')
 
 telescope.setup{
 	defaults = {
+		file_ignore_patterns = { 'vendor/.*/vendor' },
 		vimgrep_arguments = {
 			'rg',
 			'--color=never',
