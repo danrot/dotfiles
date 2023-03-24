@@ -8,4 +8,4 @@ kitty @ focus-window --match "recent:3"
 
 kitty @ send-text --match "recent:1" "ls script.md | entr make script\n"
 kitty @ send-text --match "recent:2" "ls slides.md | entr make presentation\n"
-kitty @ send-text --match "recent:0" "cd $1;nvim .\n"
+kitty @ send-text --match "recent:0" "cd $1\nnvim .\n"

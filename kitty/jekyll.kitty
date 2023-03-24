@@ -5,4 +5,4 @@ kitty @ launch --cwd $1
 kitty @ focus-window --match "recent:1"
 
 kitty @ send-text --match "recent:1" "bundle exec jekyll serve\n"
-kitty @ send-text --match "recent:0" "cd $1;nvim .\n"
+kitty @ send-text --match "recent:0" "cd $1\nnvim .\n"
