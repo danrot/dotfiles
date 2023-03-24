@@ -48,6 +48,7 @@ vim.cmd('colorscheme desert')
 
 vim.opt.title = true
 
+vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.rnu = true
 
