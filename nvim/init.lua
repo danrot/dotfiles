@@ -230,25 +230,15 @@ require('lualine').setup({
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
-telescope.setup{
-	defaults = {
-		file_ignore_patterns = { '.git', 'vendor/.*/vendor' },
-		vimgrep_arguments = {
-			'rg',
-			'--color=never',
-			'--no-heading',
-			'--with-filename',
-			'--line-number',
-			'--column',
-			'--smart-case',
-			'--no-ignore',
-		},
-	},
-}
-
 telescope.load_extension('fzf')
 
-vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ no_ignore = true, hidden = true } end)
+telescope.setup{
+	defaults = {
+		file_ignore_patterns = { '.git', }
+	}
+}
+
+vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ hidden = true } end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 
 require('mason').setup()
