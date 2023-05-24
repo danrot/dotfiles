@@ -24,6 +24,7 @@ require('packer').startup(function(use)
 			{ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
 		},
 	}
+	use 'nvim-treesitter/nvim-treesitter'
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
@@ -44,7 +45,6 @@ end)
 vim.g.mapleader = ' '
 
 vim.opt.termguicolors = true
-vim.cmd('colorscheme desert')
 
 vim.opt.title = true
 
@@ -57,6 +57,18 @@ vim.opt.mouse = 'a'
 vim.opt.switchbuf = 'usetab,newtab'
 
 vim.keymap.set('n', '<C-w>t', '<cmd>tab split<cr>')
+
+vim.cmd('colorscheme desert')
+
+vim.api.nvim_create_autocmd('FileType', {
+	callback = function(args)
+		if args.match == 'netrw' then
+			vim.cmd('syntax on')
+		else
+			vim.cmd('syntax off')
+		end
+	end
+})
 
 local cmp = require('cmp')
 local luasnip = require('luasnip')
@@ -241,6 +253,43 @@ telescope.setup{
 vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ hidden = true } end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fv', builtin.git_status)
+
+require('nvim-treesitter.configs').setup {
+	ensure_installed = {
+		'bash',
+		'bibtex',
+		'comment',
+		'css',
+		'diff',
+		'dockerfile',
+		'dot',
+		'fish',
+		'git_config',
+		'git_rebase',
+		'gitcommit',
+		'gitignore',
+		'graphql',
+		'html',
+		'java',
+		'javascript',
+		'json',
+		'lua',
+		'make',
+		'markdown',
+		'php',
+		'scss',
+		'sql',
+		'twig',
+		'vue',
+		'yaml',
+	},
+	highlight = {
+		enable = true,
+	},
+	indent = {
+		enable = true,
+	},
+}
 
 require('mason').setup()
 require('mason-lspconfig').setup()
