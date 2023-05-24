@@ -240,6 +240,7 @@ telescope.setup{
 
 vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ hidden = true } end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
+vim.keymap.set('n', '<leader>fv', builtin.git_status)
 
 require('mason').setup()
 require('mason-lspconfig').setup()
