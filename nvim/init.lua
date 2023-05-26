@@ -67,6 +67,10 @@ vim.api.nvim_create_autocmd('FileType', {
 		else
 			vim.cmd('syntax off')
 		end
+
+		if args.match == 'markdown' then
+			vim.opt.spell = true
+		end
 	end
 })
 
