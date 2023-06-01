@@ -127,10 +127,9 @@ local lint = require('lint')
 lint.linters_by_ft = {
 	css = { 'stylelint' },
 	javascript = { 'eslint' },
-	php = { 'psalm', 'phpstan' },
 	scss = { 'stylelint' },
 	typescript = { 'eslint' },
-	vue = { 'eslint' },
+	vue = { 'eslint', 'stylelint' },
 }
 
 vim.api.nvim_create_autocmd(
@@ -295,13 +294,13 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('mason').setup()
-require('mason-lspconfig').setup()
+require('mason-lspconfig').setup({
+	ensure_installed = { 'lua_ls', 'phpactor', 'volar' }
+})
 
 require('mason-lspconfig').setup_handlers {
 	function (server_name)
-		require('lspconfig')[server_name].setup({
-			on_attach = on_attach,
-		})
+		require('lspconfig')[server_name].setup({ })
 	end,
 }
 
