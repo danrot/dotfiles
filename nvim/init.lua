@@ -3,11 +3,11 @@ require('packer').startup(function(use)
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
-			{ 'hrsh7th/cmp-nvim-lsp' },
+			{'hrsh7th/cmp-nvim-lsp'},
 			{
 				'saadparwaiz1/cmp_luasnip',
 				requires = {
-					{ 'L3MON4D3/LuaSnip' }
+					{'L3MON4D3/LuaSnip'}
 				},
 			},
 		},
@@ -20,23 +20,23 @@ require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim', tag = '*',
 		requires = {
-			{ 'nvim-lua/plenary.nvim' },
-			{ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+			{'nvim-lua/plenary.nvim'},
+			{'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
 		},
 	}
 	use 'nvim-treesitter/nvim-treesitter'
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
-			{ 'mfussenegger/nvim-dap' },
+			{'mfussenegger/nvim-dap'},
 		},
 	}
 	use 'wbthomason/packer.nvim'
 	use {
 		'williamboman/mason-lspconfig.nvim',
 		requires = {
-			{ 'williamboman/mason.nvim' },
-			{ 'neovim/nvim-lspconfig' },
+			{'williamboman/mason.nvim'},
+			{'neovim/nvim-lspconfig'},
 		},
 	}
 	use 'windwp/nvim-autopairs'
@@ -76,13 +76,13 @@ vim.api.nvim_create_autocmd('FileType', {
 
 local cmp = require('cmp')
 local luasnip = require('luasnip')
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-require('luasnip.loaders.from_lua').lazy_load({ paths = vim.fn.stdpath('config') .. '/snippets' })
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+require('luasnip.loaders.from_lua').lazy_load({paths = vim.fn.stdpath('config') .. '/snippets'})
 
 cmp.setup({
 	sources = {
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' },
+		{name = 'nvim_lsp'},
+		{name = 'luasnip'},
 	},
 	snippet = {
 		expand = function(args)
@@ -125,18 +125,18 @@ vim.keymap.set('n', '[c', '<cmd>Gitsign prev_hunk<cr>')
 local lint = require('lint')
 
 lint.linters_by_ft = {
-	css = { 'stylelint' },
-	javascript = { 'eslint' },
-	scss = { 'stylelint' },
-	typescript = { 'eslint' },
-	vue = { 'eslint', 'stylelint' },
+	css = {'stylelint'},
+	javascript = {'eslint'},
+	scss = {'stylelint'},
+	typescript = {'eslint'},
+	vue = {'eslint', 'stylelint'},
 }
 
 vim.api.nvim_create_autocmd(
-	{ 'BufWritePost' },
+	{'BufWritePost'},
 	{
 		callback = function()
-			lint.try_lint(nil, { ignore_errors = true })
+			lint.try_lint(nil, {ignore_errors = true})
 		end
 	}
 )
@@ -153,7 +153,7 @@ if (xdebug_port) then
 	dap.adapters.php = {
 		type = 'executable',
 		command = 'node',
-		args = { vim.fn.stdpath('data') .. '/mason/packages/php-debug-adapter/extension/out/phpDebug.js' },
+		args = {vim.fn.stdpath('data') .. '/mason/packages/php-debug-adapter/extension/out/phpDebug.js'},
 	}
 
 	dap.configurations.php = {
@@ -230,8 +230,8 @@ end
 require('lualine').setup({
 	sections = {
 		lualine_b = {
-			{ 'b:gitsigns_head' },
-			{ 'diff', source = diff_source },
+			{'b:gitsigns_head'},
+			{'diff', source = diff_source},
 			'diagnostics',
 		}
 	},
@@ -249,11 +249,11 @@ telescope.load_extension('fzf')
 
 telescope.setup{
 	defaults = {
-		file_ignore_patterns = { '.git', }
+		file_ignore_patterns = {'.git'}
 	}
 }
 
-vim.keymap.set('n', '<leader>ff', function() builtin.find_files{ hidden = true } end)
+vim.keymap.set('n', '<leader>ff', function() builtin.find_files{hidden = true} end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fv', builtin.git_status)
 
@@ -295,12 +295,12 @@ require('nvim-treesitter.configs').setup {
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = { 'lua_ls', 'phpactor', 'volar' }
+	ensure_installed = {'lua_ls', 'phpactor', 'volar'}
 })
 
 require('mason-lspconfig').setup_handlers {
 	function (server_name)
-		require('lspconfig')[server_name].setup({ })
+		require('lspconfig')[server_name].setup({})
 	end,
 }
 
