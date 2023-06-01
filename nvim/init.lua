@@ -305,6 +305,10 @@ require('mason-lspconfig').setup_handlers {
 	end,
 }
 
+vim.diagnostic.config {
+	severity_sort = true,
+}
+
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
