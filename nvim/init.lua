@@ -247,17 +247,17 @@ local builtin = require('telescope.builtin')
 
 telescope.load_extension('fzf')
 
-telescope.setup{
+telescope.setup({
 	defaults = {
 		file_ignore_patterns = {'.git'}
 	}
-}
+})
 
 vim.keymap.set('n', '<leader>ff', function() builtin.find_files{hidden = true} end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fv', builtin.git_status)
 
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup({
 	ensure_installed = {
 		'bash',
 		'bibtex',
@@ -291,7 +291,7 @@ require('nvim-treesitter.configs').setup {
 	indent = {
 		enable = true,
 	},
-}
+})
 
 require('mason').setup()
 require('mason-lspconfig').setup({
@@ -304,9 +304,9 @@ require('mason-lspconfig').setup_handlers {
 	end,
 }
 
-vim.diagnostic.config {
+vim.diagnostic.config({
 	severity_sort = true,
-}
+})
 
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
