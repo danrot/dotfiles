@@ -236,9 +236,10 @@ require('lualine').setup({
 		}
 	},
 	options = {
+		component_separators = '|',
+		disabled_filetypes = {'dapui_stacks', 'dapui_scopes', 'dapui_watches', 'dapui_breakpoints'},
 		icons_enabled = false,
 		section_separators = '',
-		component_separators = '|',
 	}
 })
 
