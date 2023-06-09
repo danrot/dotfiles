@@ -48,9 +48,16 @@ vim.opt.termguicolors = true
 
 vim.opt.title = true
 
+vim.opt.showtabline = 2
+
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.rnu = true
+
+vim.opt.laststatus = 3
+vim.opt.fillchars = {
+	eob = ' ',
+}
 
 vim.opt.mouse = 'a'
 
@@ -237,7 +244,7 @@ require('lualine').setup({
 	},
 	options = {
 		component_separators = '|',
-		disabled_filetypes = {'dapui_stacks', 'dapui_scopes', 'dapui_watches', 'dapui_breakpoints'},
+		disabled_filetypes = {'dapui_stacks', 'dapui_scopes', 'dapui_watches', 'dapui_breakpoints', 'help'},
 		icons_enabled = false,
 		section_separators = '',
 	}
