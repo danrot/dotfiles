@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 set -l fish_functions ~/.config/fish/functions
+set -l nvim_colors ~/.config/nvim/colors
 set -l nvim_snippets ~/.config/nvim/snippets
 
 cd (dirname (status -f))
@@ -25,6 +26,13 @@ end
 
 echo '~/.config/nvim/init.lua'
 ln -s (pwd)/nvim/init.lua ~/.config/nvim/init.lua
+
+if [ -d $nvim_colors ]
+	echo $nvim_colors ' already exists'
+else
+	echo $nvim_colors
+	ln -s (pwd)/nvim/colors $nvim_colors
+end
 
 if [ -d $nvim_snippets ]
 	echo $nvim_snippets ' already exists'

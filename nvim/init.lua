@@ -25,6 +25,7 @@ require('packer').startup(function(use)
 		},
 	}
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/playground'
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
@@ -43,6 +44,8 @@ require('packer').startup(function(use)
 end)
 
 vim.g.mapleader = ' '
+
+vim.g.netrw_banner = false
 
 vim.opt.termguicolors = true
 
@@ -65,7 +68,7 @@ vim.opt.switchbuf = 'usetab,newtab'
 
 vim.keymap.set('n', '<C-w>t', '<cmd>tab split<cr>')
 
-vim.cmd('colorscheme desert')
+vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function(args)
@@ -269,6 +272,7 @@ require('nvim-treesitter.configs').setup({
 	ensure_installed = {
 		'bash',
 		'bibtex',
+		'comment',
 		'css',
 		'diff',
 		'dockerfile',
@@ -300,6 +304,8 @@ require('nvim-treesitter.configs').setup({
 		enable = true,
 	},
 })
+
+require('nvim-treesitter.configs').setup({})
 
 require('mason').setup()
 require('mason-lspconfig').setup({
