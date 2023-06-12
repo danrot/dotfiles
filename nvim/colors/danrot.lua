@@ -29,6 +29,11 @@ hl(0, 'TabLineSel', {fg = colors.silver, bg = colors.tundora, underline = true})
 hl(0, 'Normal', {fg = colors.white, bg = colors.mineShaft})
 hl(0, 'CursorLine', {bg = colors.tundora})
 
+hl(0, 'NormalFloat', {bg = colors.tundora})
+
+hl(0, 'Pmenu', {bg = colors.tundora})
+hl(0, 'PmenuSel', {bg = colors.doveGray})
+
 hl(0, 'Comment', {fg = colors.dustyGray})
 
 hl(0, 'LineNrAbove', {fg = colors.doveGray})
@@ -68,6 +73,8 @@ hl(0, '@repeat', {fg = colors.redDamask})
 hl(0, '@string', {fg = colors.aquaForest})
 hl(0, '@string.escape', {fg = colors.redDamask})
 hl(0, '@tag', {fg = colors.whiskey})
+hl(0, '@text.diff.add', {fg = colors.aquaForest})
+hl(0, '@text.diff.delete', {fg = colors.carnation})
 hl(0, '@text.title', {fg = colors.redDamask})
 hl(0, '@type', {fg = colors.white})
 hl(0, '@type.definition', {fg = colors.white})
