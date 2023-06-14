@@ -92,6 +92,12 @@ function Getter(visibility_jump_index, name_jump_index, type_jump_index, insert_
 end
 
 return {
+	s('c', {
+		t('public function __construct('), i(1), t(')'),
+		t({'', '{', ''}),
+		t('	'), i(2),
+		t({'', '}', ''}),
+	}),
 	s('dt', t('declare(strict_types=1);')),
 	s('vd', {
 		t('var_dump('), i(1), t(');')
