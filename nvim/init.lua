@@ -309,7 +309,7 @@ require('nvim-treesitter.configs').setup({})
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = {'lua_ls', 'phpactor', 'volar'}
+	ensure_installed = {'cssls', 'lua_ls', 'phpactor', 'volar'}
 })
 
 require('mason-lspconfig').setup_handlers {
