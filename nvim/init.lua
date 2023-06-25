@@ -316,7 +316,7 @@ require('mason-lspconfig').setup_handlers {
 	function (server_name)
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-		if server_name == 'html' then
+		if server_name == 'html' or server_name == 'cssls' then
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 		end
 
