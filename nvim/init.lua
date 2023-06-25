@@ -40,6 +40,7 @@ require('packer').startup(function(use)
 		},
 	}
 	use 'windwp/nvim-autopairs'
+	use 'windwp/nvim-ts-autotag'
 end)
 
 vim.g.mapleader = ' '
@@ -332,3 +333,4 @@ vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename)
 vim.keymap.set({'n', 'x'}, '<leader>ca', vim.lsp.buf.code_action)
 
 require('nvim-autopairs').setup()
+require('nvim-ts-autotag').setup()
