@@ -307,12 +307,21 @@ require('nvim-treesitter.configs').setup({
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = {'cssls', 'lua_ls', 'phpactor', 'volar'}
+	ensure_installed = {'cssls', 'html', 'lua_ls', 'phpactor', 'volar'}
 })
+
+local lspconfig = require('lspconfig')
 
 require('mason-lspconfig').setup_handlers {
 	function (server_name)
-		require('lspconfig')[server_name].setup({
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+		if server_name == 'html' then
+			capabilities.textDocument.completion.completionItem.snippetSupport = true
+		end
+
+		lspconfig[server_name].setup({
+			capabilities = capabilities,
 			on_init = function(client)
 				client.server_capabilities.semanticTokensProvider = false
 			end,
