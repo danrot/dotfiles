@@ -136,6 +136,7 @@ local lint = require('lint')
 
 lint.linters_by_ft = {
 	css = {'stylelint'},
+	html = {'tidy'},
 	javascript = {'eslint'},
 	scss = {'stylelint'},
 	typescript = {'eslint'},
