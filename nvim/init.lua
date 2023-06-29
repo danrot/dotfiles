@@ -25,6 +25,7 @@ require('packer').startup(function(use)
 		},
 	}
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/nvim-treesitter-context'
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
