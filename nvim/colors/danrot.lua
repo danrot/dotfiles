@@ -24,7 +24,9 @@ hl(0, 'VertSplit', {fg = colors.doveGray})
 
 hl(0, 'TabLine', {fg = colors.doveGray, bg = colors.mineShaft})
 hl(0, 'TabLineFill', {bg = colors.mineShaft})
-hl(0, 'TabLineSel', {fg = colors.silver, bg = colors.tundora, underline = true})
+hl(0, 'TabLineSel', {fg = colors.silver, bg = colors.tundora, bold = true})
+hl(0, 'TabLineMod', {fg = colors.carnation})
+hl(0, 'TabLineSelMod', {fg = colors.carnation, bg = colors.tundora, bold = true})
 
 hl(0, 'Normal', {fg = colors.white, bg = colors.mineShaft})
 hl(0, 'CursorLine', {bg = colors.tundora})

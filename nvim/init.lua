@@ -85,6 +85,55 @@ vim.api.nvim_create_autocmd('FileType', {
 	end
 })
 
+function Tabline()
+	local tabs = {}
+	local tab_length = vim.fn.tabpagenr('$')
+	local tabline_length = 0
+
+	for index = 1, tab_length do
+		local winnr = vim.fn.tabpagewinnr(index)
+        local buflist = vim.fn.tabpagebuflist(index)
+        local bufnr = buflist[winnr]
+        local bufname = vim.fn.bufname(bufnr)
+		local bufmodified = vim.fn.getbufvar(bufnr, '&mod')
+		local title = vim.fn.fnamemodify(bufname, ':~:.')
+		local width = tostring(index):len() + title:len() + 4
+
+		tabline_length = tabline_length + width
+
+		table.insert(
+			tabs,
+			{
+				title = title,
+				bufmodified = bufmodified,
+				width = width,
+			}
+		)
+	end
+
+	local tabline_length_diff = math.ceil(tabline_length - vim.o.columns)
+	local shorten_title = tabline_length_diff > 0
+
+	local tabline = ''
+	for index, tab in ipairs(tabs) do
+		local modifier = (tab.bufmodified == 1 and 'Mod' or '')
+		local tabline_used_part = tab.width / tabline_length;
+
+		tabline = tabline
+			.. (index == vim.fn.tabpagenr() and '%#TabLineSel' .. modifier .. '#' or '%#TabLine' .. modifier ..'#')
+			.. ' ' .. index .. ': '
+			.. (shorten_title
+				and string.sub(tab.title, math.ceil(tabline_length_diff * tabline_used_part) + 1, -1)
+				or tab.title
+			)
+			.. ' %#TabLineFill#%T'
+	end
+
+	return tabline
+end
+
+vim.opt.tabline = '%!v:lua.Tabline()'
+
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
