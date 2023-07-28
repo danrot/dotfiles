@@ -313,12 +313,15 @@ local builtin = require('telescope.builtin')
 telescope.load_extension('fzf')
 
 telescope.setup({
-	defaults = {
-		file_ignore_patterns = {'.git'}
-	}
+	defaults = require('telescope.themes').get_dropdown({
+		file_ignore_patterns = {'.git'},
+		layout_config = {
+			width = 0.95,
+		},
+	}),
 })
 
-vim.keymap.set('n', '<leader>ff', function() builtin.find_files{hidden = true} end)
+vim.keymap.set('n', '<leader>ff', builtin.find_files)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fv', builtin.git_status)
 
