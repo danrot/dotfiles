@@ -310,6 +310,7 @@ require('lualine').setup({
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local config = require('telescope.config')
+local actions = require("telescope.actions")
 
 local vimgrep_arguments = {unpack(config.values.vimgrep_arguments)}
 
@@ -324,6 +325,11 @@ telescope.setup({
 		file_ignore_patterns = {'.git'},
 		layout_config = {
 			width = 0.95,
+		},
+		mappings = {
+			i = {
+				['<esc>'] = actions.close,
+			},
 		},
 		vimgrep_arguments = vimgrep_arguments,
 	}),
