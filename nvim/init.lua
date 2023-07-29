@@ -309,6 +309,13 @@ require('lualine').setup({
 
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
+local config = require('telescope.config')
+
+local vimgrep_arguments = {unpack(config.values.vimgrep_arguments)}
+
+table.insert(vimgrep_arguments, '--hidden')
+table.insert(vimgrep_arguments, '--glob')
+table.insert(vimgrep_arguments, '!**/.git/*')
 
 telescope.load_extension('fzf')
 
@@ -318,7 +325,13 @@ telescope.setup({
 		layout_config = {
 			width = 0.95,
 		},
+		vimgrep_arguments = vimgrep_arguments,
 	}),
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
 })
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files)
