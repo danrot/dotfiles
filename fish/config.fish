@@ -43,4 +43,5 @@ source $dotfiles_root/rust/config.fish
 set -g fish_user_abbreviations
 abbr --add g 'grep'
 source $dotfiles_root/composer/aliases.fish
+source $dotfiles_root/docker/aliases.fish
 source $dotfiles_root/git/aliases.fish
