@@ -67,8 +67,6 @@ vim.opt.mouse = 'a'
 
 vim.opt.switchbuf = 'usetab,newtab'
 
-vim.keymap.set('n', '<C-w>t', '<cmd>tab split<cr>')
-
 vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -269,12 +267,19 @@ dapui.setup({
 	},
 })
 
+-- Taken and adjusted from https://github.com/rcarriga/nvim-dap-ui/issues/122#issuecomment-1196748175
+local dapui_tab = nil
+
 dap.listeners.after.event_initialized["dapui_config"] = function()
+	vim.api.nvim_exec('tabedit %', false)
+	dapui_tab = vim.api.nvim_win_get_tabpage(vim.fn.win_getid())
 	dapui.open()
 end
 
 dap.listeners.before.disconnect["dapui_config"] = function()
 	dapui.close()
+	vim.api.nvim_exec('tabclose ' .. vim.api.nvim_tabpage_get_number(dapui_tab), false)
+	dapui_tab = nil
 end
 
 require('Comment').setup()
