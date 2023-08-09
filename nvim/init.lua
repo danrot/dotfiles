@@ -327,7 +327,7 @@ telescope.load_extension('fzf')
 
 telescope.setup({
 	defaults = require('telescope.themes').get_dropdown({
-		file_ignore_patterns = {'.git'},
+		file_ignore_patterns = {'.git/'},
 		layout_config = {
 			width = 0.95,
 		},
