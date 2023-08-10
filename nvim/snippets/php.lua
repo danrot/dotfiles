@@ -62,7 +62,7 @@ function Setter(visibility_jump_index, name_jump_index, type_jump_index, insert_
 		insert_name and i(name_jump_index) or Mirror(name_jump_index),
 		t(' = $'),
 		Mirror(name_jump_index),
-		t({';', '}', ''}),
+		t({';', '}'}),
 	}
 end
 
@@ -87,7 +87,7 @@ function Getter(visibility_jump_index, name_jump_index, type_jump_index, insert_
 		insert_type and i(type_jump_index) or Mirror(type_jump_index),
 		t({'', '{', '	return $this->'}),
 		insert_name and i(name_jump_index) or Mirror(name_jump_index),
-		t({';', '}', ''}),
+		t({';', '}'}),
 	}
 end
 
@@ -96,7 +96,7 @@ return {
 		t('public function __construct('), i(1), t(')'),
 		t({'', '{', ''}),
 		t('	'), i(2),
-		t({'', '}', ''}),
+		t({'', '}'}),
 	}),
 	s('dt', t('declare(strict_types=1);')),
 	s('vd', {
