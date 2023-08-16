@@ -376,6 +376,7 @@ require('nvim-treesitter.configs').setup({
 		'sql',
 		'twig',
 		'vue',
+		'xml',
 		'yaml',
 	},
 	highlight = {
