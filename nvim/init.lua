@@ -67,6 +67,14 @@ vim.opt.mouse = 'a'
 
 vim.opt.switchbuf = 'usetab,newtab'
 
+vim.opt.grepprg = 'rg --vimgrep --smart-case'
+vim.opt.grepformat = '%f:%l:%c:%m'
+
+vim.keymap.set('n', ']l', '<cmd>lnext<cr>')
+vim.keymap.set('n', '[l', '<cmd>lprevious<cr>')
+vim.keymap.set('n', ']q', '<cmd>cnext<cr>')
+vim.keymap.set('n', '[q', '<cmd>cprevious<cr>')
+
 vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
