@@ -65,8 +65,6 @@ vim.opt.fillchars = {
 
 vim.opt.mouse = 'a'
 
-vim.opt.switchbuf = 'usetab,newtab'
-
 vim.opt.grepprg = 'rg --vimgrep --smart-case'
 vim.opt.grepformat = '%f:%l:%c:%m'
 
@@ -211,8 +209,6 @@ vim.api.nvim_create_autocmd(
 )
 
 local dap = require('dap')
-
-dap.defaults.fallback.switchbuf = 'uselast'
 
 local xdebug_port = os.getenv('NVIM_XDEBUG_PORT')
 local xdebug_path_server = os.getenv('NVIM_XDEBUG_PATH_SERVER')
