@@ -67,6 +67,13 @@ vim.keymap.set('n', '[l', '<cmd>lprevious<cr>')
 vim.keymap.set('n', ']q', '<cmd>cnext<cr>')
 vim.keymap.set('n', '[q', '<cmd>cprevious<cr>')
 
+vim.diagnostic.config({
+	severity_sort = true,
+})
+
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+
 vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -376,12 +383,6 @@ require('mason-lspconfig').setup_handlers {
 	end,
 }
 
-vim.diagnostic.config({
-	severity_sort = true,
-})
-
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
