@@ -14,16 +14,10 @@ require('packer').startup(function(use)
 	}
 	use 'kylechui/nvim-surround'
 	use 'lewis6991/gitsigns.nvim'
+	use 'mfussenegger/nvim-fzy'
 	use 'mfussenegger/nvim-lint'
 	use 'numToStr/Comment.nvim'
 	use 'nvim-lualine/lualine.nvim'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '*',
-		requires = {
-			{'nvim-lua/plenary.nvim'},
-			{'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
-		},
-	}
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/nvim-treesitter-context'
 	use {
@@ -316,42 +310,9 @@ require('lualine').setup({
 	}
 })
 
-local telescope = require('telescope')
-local builtin = require('telescope.builtin')
-local config = require('telescope.config')
-local actions = require("telescope.actions")
+local fzy = require('fzy')
 
-local vimgrep_arguments = {unpack(config.values.vimgrep_arguments)}
-
-table.insert(vimgrep_arguments, '--hidden')
-table.insert(vimgrep_arguments, '--glob')
-table.insert(vimgrep_arguments, '!**/.git/*')
-
-telescope.load_extension('fzf')
-
-telescope.setup({
-	defaults = require('telescope.themes').get_dropdown({
-		file_ignore_patterns = {'.git/'},
-		layout_config = {
-			width = 0.95,
-		},
-		mappings = {
-			i = {
-				['<esc>'] = actions.close,
-			},
-		},
-		vimgrep_arguments = vimgrep_arguments,
-	}),
-	pickers = {
-		find_files = {
-			hidden = true,
-		},
-	},
-})
-
-vim.keymap.set('n', '<leader>ff', builtin.find_files)
-vim.keymap.set('n', '<leader>fg', builtin.live_grep)
-vim.keymap.set('n', '<leader>fv', builtin.git_status)
+vim.keymap.set('n', '<leader>ff', function() fzy.execute('fd -u -E .git', fzy.sinks.edit_file) end)
 
 require('nvim-treesitter.configs').setup({
 	ensure_installed = {
