@@ -320,6 +320,11 @@ require('lualine').setup({
 local fzy = require('fzy')
 
 vim.keymap.set('n', '<leader>ff', function() fzy.execute('fd -u -E .git', fzy.sinks.edit_file) end)
+vim.keymap.set(
+	'n',
+	'<leader>fg',
+	function() fzy.execute('git status --porcelain | rg "^[ \\?][M\\?]" | cut -c 4-', fzy.sinks.edit_file) end
+)
 
 require('nvim-treesitter.configs').setup({
 	ensure_installed = {
