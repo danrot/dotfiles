@@ -105,6 +105,13 @@ return {
 	s('vdd', {
 		t('var_dump('), i(1), t(');die();')
 	}),
+	s('ca', {
+		t('$this->'),
+		i(1),
+		t(' = $'),
+		Mirror(1),
+		t(';'),
+	}),
 	s('g', Getter()),
 	s('s', Setter()),
 	s('gs', Concat(Concat(Getter(1, 2, 3), {t({'', ''})}), Setter(4, 2, 3, false, false))),
