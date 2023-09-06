@@ -78,7 +78,7 @@ vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function(args)
-		if args.match == 'netrw' then
+		if args.match == 'netrw' or args.match == 'qf' then
 			vim.cmd('syntax on')
 		else
 			vim.cmd('syntax off')
