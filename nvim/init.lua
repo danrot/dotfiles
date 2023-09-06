@@ -277,6 +277,7 @@ local dapui_tab = nil
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	vim.api.nvim_exec('tabedit %', false)
+	vim.api.nvim_exec('tabmove 0', false)
 	dapui_tab = vim.api.nvim_win_get_tabpage(vim.fn.win_getid())
 	dapui.open()
 end
