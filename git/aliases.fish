@@ -1,6 +1,7 @@
 abbr --add gs 'git status'
 abbr --add gd 'git diff'
 abbr --add gds 'git diff --staged'
+abbr --add gsh 'git show'
 abbr --add ga 'git add'
 abbr --add gc 'git commit'
 abbr --add gp 'git push'
