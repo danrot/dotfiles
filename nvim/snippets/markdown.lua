@@ -8,9 +8,10 @@ end
 
 return {
 	s('c', Codeblock()),
-	s('cjs', Codeblock('javascript')),
-	s('cjson', Codeblock('json')),
+	s('cbash', Codeblock('bash')),
 	s('ccss', Codeblock('css')),
 	s('chtml', Codeblock('html')),
-	s('cbash', Codeblock('bash')),
+	s('cjs', Codeblock('javascript')),
+	s('cjson', Codeblock('json')),
+	s('cphp', Codeblock('php')),
 }
