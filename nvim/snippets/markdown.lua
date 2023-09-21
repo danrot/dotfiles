@@ -14,4 +14,5 @@ return {
 	s('cjs', Codeblock('javascript')),
 	s('cjson', Codeblock('json')),
 	s('cphp', Codeblock('php')),
+	s('cyaml', Codeblock('yaml')),
 }
