@@ -90,6 +90,17 @@ vim.api.nvim_create_autocmd('FileType', {
 	end
 })
 
+vim.api.nvim_create_autocmd('QuickFixCmdPost', {
+	callback = function (args)
+		vim.fn.feedkeys('<CR>')
+		if args.match:sub(1, 1) == 'l' then
+			vim.cmd('lwindow')
+		else
+			vim.cmd('cwindow')
+		end
+	end
+})
+
 function Tabline()
 	local tabs = {}
 	local tab_length = vim.fn.tabpagenr('$')
