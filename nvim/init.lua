@@ -331,7 +331,7 @@ require('lualine').setup({
 
 local fzy = require('fzy')
 
-vim.keymap.set('n', '<leader>ff', function() fzy.execute('fd -u -E .git', fzy.sinks.edit_file) end)
+vim.keymap.set('n', '<leader>ff', function() fzy.execute('fd -t f -u -E .git', fzy.sinks.edit_file) end)
 vim.keymap.set(
 	'n',
 	'<leader>fg',
