@@ -364,6 +364,7 @@ require('nvim-treesitter.configs').setup({
 		'scss',
 		'sql',
 		'twig',
+		'typescript',
 		'vue',
 		'xml',
 		'yaml',
