@@ -41,6 +41,7 @@ end)
 vim.g.mapleader = ' '
 
 vim.g.netrw_banner = false
+vim.g.netrw_sort_sequence = '\\/$,*'
 
 vim.opt.termguicolors = true
 
