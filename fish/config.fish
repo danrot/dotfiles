@@ -45,3 +45,4 @@ abbr --add g 'grep'
 source $dotfiles_root/composer/aliases.fish
 source $dotfiles_root/docker/aliases.fish
 source $dotfiles_root/git/aliases.fish
+source $dotfiles_root/kitty/aliases.fish
