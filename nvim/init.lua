@@ -79,12 +79,6 @@ vim.cmd('colorscheme danrot')
 
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function(args)
-		if args.match == 'netrw' or args.match == 'qf' then
-			vim.cmd('syntax on')
-		else
-			vim.cmd('syntax off')
-		end
-
 		if args.match == 'markdown' then
 			vim.opt.spell = true
 		end
@@ -372,6 +366,7 @@ require('nvim-treesitter.configs').setup({
 	},
 	highlight = {
 		enable = true,
+		additional_vim_regex_highlighting = false,
 	},
 	indent = {
 		enable = true,
