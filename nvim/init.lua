@@ -331,7 +331,7 @@ vim.keymap.set('n', '<leader>ff', function() fzy.execute('fd -t f -u -E .git', f
 vim.keymap.set(
 	'n',
 	'<leader>fg',
-	function() fzy.execute('git status --porcelain | rg "^[ \\?][M\\?]" | cut -c 4-', fzy.sinks.edit_file) end
+	function() fzy.execute('git status --porcelain | rg "^.[M\\?]" | cut -c 4-', fzy.sinks.edit_file) end
 )
 
 require('nvim-treesitter.configs').setup({
