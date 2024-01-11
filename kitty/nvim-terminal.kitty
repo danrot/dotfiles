@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ ! -d $1 ]]; then
+	exit 1;
+fi
+
 kitty @ set-tab-title $(basename $1)
 
 kitty @ launch --cwd $1
