@@ -59,7 +59,7 @@ vim.opt.fillchars = {
 	eob = ' ',
 }
 
-vim.opt.mouse = 'a'
+vim.opt.mouse = ''
 
 vim.opt.grepprg = 'rg --vimgrep --smart-case'
 vim.opt.grepformat = '%f:%l:%c:%m'
