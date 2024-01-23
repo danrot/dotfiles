@@ -61,7 +61,7 @@ vim.opt.fillchars = {
 
 vim.opt.mouse = ''
 
-vim.opt.grepprg = 'rg --vimgrep --smart-case'
+vim.opt.grepprg = 'rg --vimgrep'
 vim.opt.grepformat = '%f:%l:%c:%m'
 
 vim.keymap.set('n', ']l', '<cmd>lnext<cr>')
