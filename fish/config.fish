@@ -41,7 +41,11 @@ source $dotfiles_root/ruby/config.fish
 source $dotfiles_root/rust/config.fish
 
 set -g fish_user_abbreviations
+
 abbr --add g 'grep'
+abbr --add ~dev --position anywhere ~/Documents/Development
+bind '/' expand-abbr self-insert
+
 source $dotfiles_root/composer/aliases.fish
 source $dotfiles_root/docker/aliases.fish
 source $dotfiles_root/git/aliases.fish
