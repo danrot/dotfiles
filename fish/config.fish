@@ -44,6 +44,7 @@ set -g fish_user_abbreviations
 
 abbr --add g 'grep'
 abbr --add ~dev --position anywhere ~/Documents/Development
+abbr --add ~tmp --position anywhere ~/Documents/Temporary
 bind '/' expand-abbr self-insert
 
 source $dotfiles_root/composer/aliases.fish
