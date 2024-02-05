@@ -89,3 +89,7 @@ hl(0, '@type', {fg = colors.white})
 hl(0, '@type.definition', {fg = colors.white})
 hl(0, '@type.qualifier', {fg = colors.redDamask})
 hl(0, '@variable', {fg = colors.viola})
+
+hl(0, 'editorconfigProperty', {fg = colors.viola})
+hl(0, 'dosiniLabel', {fg = colors.viola})
+hl(0, 'dosiniValue', {fg = colors.aquaForest})
