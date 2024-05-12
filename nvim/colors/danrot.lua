@@ -93,3 +93,8 @@ hl(0, '@variable', {fg = colors.viola})
 hl(0, 'editorconfigProperty', {fg = colors.viola})
 hl(0, 'dosiniLabel', {fg = colors.viola})
 hl(0, 'dosiniValue', {fg = colors.aquaForest})
+
+hl(0, 'jsonKeyword', {fg = colors.viola})
+hl(0, 'jsonBraces', {fg = colors.white})
+hl(0, 'jsonBoolean', {fg = colors.redDamask})
+hl(0, 'jsonString', {fg = colors.aquaForest})
