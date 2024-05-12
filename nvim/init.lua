@@ -16,6 +16,7 @@ require('packer').startup(function(use)
 	use 'lewis6991/gitsigns.nvim'
 	use 'mfussenegger/nvim-fzy'
 	use 'mfussenegger/nvim-lint'
+	use 'norcalli/nvim-colorizer.lua'
 	use 'numToStr/Comment.nvim'
 	use 'nvim-lualine/lualine.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
@@ -215,6 +216,8 @@ vim.api.nvim_create_autocmd(
 		end
 	}
 )
+
+require('colorizer').setup()
 
 local dap = require('dap')
 
