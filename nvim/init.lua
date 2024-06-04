@@ -380,7 +380,17 @@ require('nvim-treesitter.configs').setup({
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = {'bashls', 'cssls', 'html', 'jsonls', 'lua_ls', 'phpactor', 'tsserver', 'volar'}
+	ensure_installed = {
+		'bashls',
+		'cssls',
+		'html',
+		'jsonls',
+		'lua_ls',
+		'phpactor',
+		'tsserver',
+		'volar',
+		'yamlls'
+	}
 })
 
 local lspconfig = require('lspconfig')
