@@ -8,6 +8,7 @@ local colors = {
 	doveGray = '#666666',
 	dustyGray = '#999999',
 	mineShaft = '#333333',
+	perfume = '#CF9FF4',
 	redDamask = '#DF853A',
 	silver = '#CCCCCC',
 	tundora = '#444444',
@@ -89,6 +90,7 @@ hl(0, '@type', {fg = colors.white})
 hl(0, '@type.definition', {fg = colors.white})
 hl(0, '@type.qualifier', {fg = colors.redDamask})
 hl(0, '@variable', {fg = colors.viola})
+hl(0, '@variable.builtin', {fg = colors.perfume})
 
 hl(0, 'editorconfigProperty', {fg = colors.viola})
 hl(0, 'dosiniLabel', {fg = colors.viola})
