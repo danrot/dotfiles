@@ -102,3 +102,7 @@ hl(0, 'jsonKeyword', {fg = colors.viola})
 hl(0, 'jsonBraces', {fg = colors.white})
 hl(0, 'jsonBoolean', {fg = colors.redDamask})
 hl(0, 'jsonString', {fg = colors.aquaForest})
+
+hl(0, 'robotsAgent', {fg = colors.viola})
+hl(0, 'robotsDisallow', {fg = colors.viola})
+hl(0, 'robotsLine', {fg = colors.aquaForest})
