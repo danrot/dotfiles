@@ -25,6 +25,7 @@ require('packer').startup(function(use)
 		'rcarriga/nvim-dap-ui',
 		requires = {
 			{'mfussenegger/nvim-dap'},
+			{'nvim-neotest/nvim-nio'},
 		},
 	}
 	use 'wbthomason/packer.nvim'
