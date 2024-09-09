@@ -384,7 +384,7 @@ require('mason-lspconfig').setup({
 		'jsonls',
 		'lua_ls',
 		'phpactor',
-		'tsserver',
+		'ts_ls',
 		'volar',
 		'yamlls'
 	}
