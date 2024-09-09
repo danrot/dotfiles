@@ -21,6 +21,7 @@ require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/nvim-treesitter-context'
+	use 'nvim-treesitter/nvim-treesitter-textobjects'
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
@@ -372,6 +373,31 @@ require('nvim-treesitter.configs').setup({
 	},
 	indent = {
 		enable = true,
+	},
+	textobjects = {
+		move = {
+			enable = true,
+			set_jumps = true,
+			goto_next_start = {
+				[']m'] = '@function.outer',
+			},
+			goto_next_end = {
+				[']M'] = '@function.outer',
+			},
+			goto_previous_start = {
+				['[m'] = '@function.outer',
+			},
+			goto_previous_end = {
+				['[M'] = '@function.outer',
+			},
+		},
+		select = {
+			enable = true,
+			keymaps = {
+				['am'] = '@function.outer',
+				['im'] = '@function.inner',
+			},
+		},
 	},
 })
 
