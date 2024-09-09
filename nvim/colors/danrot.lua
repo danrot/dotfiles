@@ -45,6 +45,8 @@ hl(0, 'LineNrBelow', {fg = colors.doveGray})
 
 hl(0, 'qfLineNr', {fg = "#EBED97"})
 
+hl(0, 'signColumn', {fg = colors.white})
+
 hl(0, 'GitSignsAdd', {bg = colors.aquaForest})
 hl(0, 'GitSignsChange', {bg = colors.whiskey})
 hl(0, 'GitSignsDelete', {bg = colors.carnation})
