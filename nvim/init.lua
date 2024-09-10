@@ -188,7 +188,9 @@ cmp.setup({
 
 require('nvim-surround').setup()
 
-require('gitsigns').setup()
+require('gitsigns').setup({
+	signs_staged_enable = false
+})
 
 vim.keymap.set('n', ']c', '<cmd>Gitsign next_hunk<cr>')
 vim.keymap.set('n', '[c', '<cmd>Gitsign prev_hunk<cr>')
