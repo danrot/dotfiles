@@ -1,9 +1,9 @@
 require('packer').startup(function(use)
 	use 'gpanders/editorconfig.nvim'
 	use {
-		'hrsh7th/nvim-cmp',
+		'hrsh7th/cmp-nvim-lsp',
 		requires = {
-			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/nvim-cmp'},
 		},
 	}
 	use 'kylechui/nvim-surround'
