@@ -142,9 +142,44 @@ vim.opt.tabline = '%!v:lua.Tabline()'
 local cmp = require('cmp')
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
+local snippets_by_filetype = {
+	php = {
+		{
+			trigger = 'vdd',
+			body = 'var_dump($0);die();',
+		},
+	}
+}
+
+local snippets_buffer_cache = {}
+cmp.register_source('snippets', {
+	complete = function(_, _, callback)
+		local bufnr = vim.api.nvim_get_current_buf()
+
+		if not snippets_buffer_cache[bufnr] then
+			local filetype = vim.bo.filetype
+
+			snippets_buffer_cache[bufnr] = snippets_by_filetype[filetype]
+				and vim.tbl_map(function(snippet)
+					return {
+						word = snippet.trigger,
+						label = snippet.trigger,
+						kind = vim.lsp.protocol.CompletionItemKind.Snippet,
+						insertText = snippet.body,
+						insertTextFormat = vim.lsp.protocol.InsertTextFormat.Snippet,
+					}
+				end, snippets_by_filetype[filetype])
+				or nil
+		end
+
+		callback(snippets_buffer_cache[bufnr])
+	end
+})
+
 cmp.setup({
 	sources = {
 		{name = 'nvim_lsp'},
+		{name = 'snippets'},
 	},
 	mapping = {
 		['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -152,6 +187,20 @@ cmp.setup({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
 		['<C-d>'] = cmp.mapping.scroll_docs(4),
 		['<Cr>'] = cmp.mapping.confirm(),
+		['<Tab>'] = cmp.mapping(function(fallback)
+			if vim.snippet.active({direction = 1}) then
+				vim.snippet.jump(1)
+			else
+				fallback()
+			end
+		end, {'i', 's'}),
+		['<S-Tab>'] = cmp.mapping(function(fallback)
+			if vim.snippet.active({direction = -1}) then
+				vim.snippet.jump(-1)
+			else
+				fallback()
+			end
+		end, {'i', 's'}),
 	},
 })
 
