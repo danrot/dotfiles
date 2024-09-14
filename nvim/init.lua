@@ -4,12 +4,6 @@ require('packer').startup(function(use)
 		'hrsh7th/nvim-cmp',
 		requires = {
 			{'hrsh7th/cmp-nvim-lsp'},
-			{
-				'saadparwaiz1/cmp_luasnip',
-				requires = {
-					{'L3MON4D3/LuaSnip'}
-				},
-			},
 		},
 	}
 	use 'kylechui/nvim-surround'
@@ -146,19 +140,11 @@ end
 vim.opt.tabline = '%!v:lua.Tabline()'
 
 local cmp = require('cmp')
-local luasnip = require('luasnip')
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-require('luasnip.loaders.from_lua').lazy_load({paths = vim.fn.stdpath('config') .. '/snippets'})
 
 cmp.setup({
 	sources = {
 		{name = 'nvim_lsp'},
-		{name = 'luasnip'},
-	},
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end
 	},
 	mapping = {
 		['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -166,23 +152,6 @@ cmp.setup({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
 		['<C-d>'] = cmp.mapping.scroll_docs(4),
 		['<Cr>'] = cmp.mapping.confirm(),
-		['<Tab>'] = cmp.mapping(function(fallback)
-			if luasnip.jumpable(1) then
-				luasnip.jump(1)
-			else
-				fallback()
-			end
-		end, {'i', 's'}),
-		['<S-Tab>'] = cmp.mapping(function(fallback)
-			if luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, {'i', 's'}),
-		['<C-e>'] = cmp.mapping(function()
-			luasnip.change_choice(1)
-		end, {'i', 's'}),
 	},
 })
 
