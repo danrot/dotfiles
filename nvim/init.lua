@@ -143,6 +143,12 @@ local cmp = require('cmp')
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 local snippets_by_filetype = {
+	javascript = {
+		{
+			trigger = 'cl',
+			body = 'console.log($0);',
+		},
+	},
 	php = {
 		{
 			trigger = 'vdd',
