@@ -218,6 +218,7 @@ require('gitsigns').setup({
 
 vim.keymap.set('n', ']c', '<cmd>Gitsign next_hunk<cr>')
 vim.keymap.set('n', '[c', '<cmd>Gitsign prev_hunk<cr>')
+vim.keymap.set('n', '<leader>ga', '<cmd>!git add %<cr><cr>')
 
 local lint = require('lint')
 
