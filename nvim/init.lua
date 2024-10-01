@@ -443,7 +443,6 @@ require('mason-lspconfig').setup({
 		'phpactor',
 		'ts_ls',
 		'volar',
-		'yamlls'
 	}
 })
 
