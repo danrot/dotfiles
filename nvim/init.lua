@@ -47,6 +47,8 @@ vim.opt.title = true
 
 vim.opt.showtabline = 2
 
+vim.opt.tabstop = 4
+
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.rnu = true
