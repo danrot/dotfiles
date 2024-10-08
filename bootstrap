@@ -44,6 +44,9 @@ end
 echo '~/.gitconfig'
 ln -s (pwd)/git/.gitconfig ~/.gitconfig
 
+echo '~/.gitconfig-yumpu'
+ln -s (pwd)/git/.gitconfig-yumpu ~/.gitconfig-yumpu
+
 echo '~/.gitignore'
 ln -s (pwd)/git/.gitignore ~/.gitignore
 
