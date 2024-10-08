@@ -125,3 +125,6 @@ hl(0, 'ngxDirectiveControl', {fg = colors.redDamask})
 hl(0, 'ngxDirectiveImportant', {fg = colors.redDamask})
 hl(0, 'ngxInteger', {fg = colors.bermuda})
 hl(0, 'ngxVariable', {fg = colors.viola})
+
+hl(0, 'sshconfigKeyword', {fg = colors.redDamask})
+hl(0, 'sshconfigMatch', {fg = colors.redDamask})
