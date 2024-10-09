@@ -157,7 +157,13 @@ local snippets_by_filetype = {
 			trigger = 'vdd',
 			body = 'var_dump($0);die();',
 		},
-	}
+	},
+	markdown = {
+		{
+			trigger = 'cbash',
+			body = '```bash\n$0\n```',
+		},
+	},
 }
 
 local snippets_buffer_cache = {}
