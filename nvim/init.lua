@@ -8,6 +8,7 @@ require('packer').startup(function(use)
 	}
 	use 'kylechui/nvim-surround'
 	use 'lewis6991/gitsigns.nvim'
+	use 'lukas-reineke/indent-blankline.nvim'
 	use 'mfussenegger/nvim-fzy'
 	use 'mfussenegger/nvim-lint'
 	use 'norcalli/nvim-colorizer.lua'
@@ -223,6 +224,12 @@ require('nvim-surround').setup()
 
 require('gitsigns').setup({
 	signs_staged_enable = false
+})
+
+require('ibl').setup({
+	indent = {
+		char = '▏',
+	},
 })
 
 vim.keymap.set('n', ']c', '<cmd>Gitsign next_hunk<cr>')

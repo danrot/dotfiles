@@ -128,3 +128,6 @@ hl(0, 'ngxVariable', {fg = colors.viola})
 
 hl(0, 'sshconfigKeyword', {fg = colors.redDamask})
 hl(0, 'sshconfigMatch', {fg = colors.redDamask})
+
+hl(0, 'IblIndent', {fg = colors.tundora})
+hl(0, 'IblScope', {fg = colors.doveGray})
