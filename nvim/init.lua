@@ -158,6 +158,10 @@ local snippets_by_filetype = {
 			trigger = 'vdd',
 			body = 'var_dump($0);die();',
 		},
+		{
+			trigger = 'dt',
+			body = 'declare(strict_types=1);',
+		},
 	},
 	markdown = {
 		{
