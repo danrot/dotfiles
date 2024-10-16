@@ -153,20 +153,20 @@ local snippets_by_filetype = {
 			body = 'console.log($0);',
 		},
 	},
-	php = {
-		{
-			trigger = 'vdd',
-			body = 'var_dump($0);die();',
-		},
-		{
-			trigger = 'dt',
-			body = 'declare(strict_types=1);',
-		},
-	},
 	markdown = {
 		{
 			trigger = 'cbash',
 			body = '```bash\n$0\n```',
+		},
+	},
+	php = {
+		{
+			trigger = 'dt',
+			body = 'declare(strict_types=1);',
+		},
+		{
+			trigger = 'vdd',
+			body = 'var_dump($0);die();',
 		},
 	},
 }
