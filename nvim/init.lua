@@ -169,6 +169,12 @@ local snippets_by_filetype = {
 			body = 'var_dump($0);die();',
 		},
 	},
+	sh = {
+		{
+			trigger = '!bash',
+			body = '#!/bin/bash',
+		},
+	},
 }
 
 local snippets_buffer_cache = {}
