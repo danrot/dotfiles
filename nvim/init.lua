@@ -451,6 +451,8 @@ require('nvim-treesitter.configs').setup({
 				['im'] = '@function.inner',
 				['aa'] = '@parameter.outer',
 				['ia'] = '@parameter.inner',
+				['ad'] = '@assignment.outer',
+				['id'] = '@assignment.inner',
 			},
 		},
 	},
