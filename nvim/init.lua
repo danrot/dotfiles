@@ -158,6 +158,10 @@ local snippets_by_filetype = {
 			trigger = 'cbash',
 			body = '```bash\n$0\n```',
 		},
+		{
+			trigger = 'cphp',
+			body = '```php\n$0\n```',
+		},
 	},
 	php = {
 		{
