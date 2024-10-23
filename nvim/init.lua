@@ -159,8 +159,16 @@ local snippets_by_filetype = {
 			body = '```bash\n$0\n```',
 		},
 		{
+			trigger = 'cjs',
+			body = '```javascript\n$0\n```',
+		},
+		{
 			trigger = 'cphp',
 			body = '```php\n$0\n```',
+		},
+		{
+			trigger = 'cplain',
+			body = '```plaintext\n$0\n```',
 		},
 	},
 	php = {
