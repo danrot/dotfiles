@@ -489,9 +489,21 @@ local lspconfig = require('lspconfig')
 require('mason-lspconfig').setup_handlers {
 	function (server_name)
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		local settings = {}
 
 		if server_name == 'html' or server_name == 'cssls' then
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
+		end
+
+		if server_name == 'lua_ls' then
+			settings.Lua = {
+				diagnostics = {
+					globals = {'vim'},
+				},
+				workspace = {
+					library = vim.api.nvim_get_runtime_file('', true),
+				},
+			}
 		end
 
 		lspconfig[server_name].setup({
@@ -499,6 +511,7 @@ require('mason-lspconfig').setup_handlers {
 			on_init = function(client)
 				client.server_capabilities.semanticTokensProvider = false
 			end,
+			settings = settings,
 		})
 	end,
 }
