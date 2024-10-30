@@ -34,6 +34,7 @@ source $dotfiles_root/android/config.fish
 source $dotfiles_root/bin/config.fish
 source $dotfiles_root/composer/config.fish
 source $dotfiles_root/direnv/config.fish
+source $dotfiles_root/docker/config.fish
 source $dotfiles_root/n/config.fish
 source $dotfiles_root/npm/config.fish
 source $dotfiles_root/nvim/config.fish
