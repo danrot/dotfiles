@@ -178,6 +178,10 @@ local snippets_by_filetype = {
 			body = 'declare(strict_types=1);',
 		},
 		{
+			trigger = 'vd',
+			body = 'var_dump($0);',
+		},
+		{
 			trigger = 'vdd',
 			body = 'var_dump($0);die();',
 		},
