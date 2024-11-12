@@ -63,6 +63,9 @@ vim.opt.fillchars = {
 
 vim.opt.mouse = ''
 
+vim.opt.foldmethod = 'indent'
+vim.opt.foldenable = false
+
 vim.opt.grepprg = 'rg --vimgrep'
 
 vim.keymap.set('n', ']l', '<cmd>lnext<cr>')
