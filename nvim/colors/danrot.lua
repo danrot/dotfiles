@@ -131,3 +131,6 @@ hl(0, 'sshconfigMatch', {fg = colors.redDamask})
 
 hl(0, 'IblIndent', {fg = colors.tundora})
 hl(0, 'IblScope', {fg = colors.doveGray})
+
+hl(0, '@string.special.path.gitignore', {fg = colors.white})
+hl(0, '@character.special.gitignore', {fg = colors.redDamask})
