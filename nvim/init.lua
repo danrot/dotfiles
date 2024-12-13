@@ -174,6 +174,10 @@ local snippets_by_filetype = {
 			trigger = 'cplain',
 			body = '```plaintext\n$0\n```',
 		},
+		{
+			trigger = 'cxml',
+			body = '```xml\n$0\n```',
+		},
 	},
 	php = {
 		{
