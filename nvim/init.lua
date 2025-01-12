@@ -163,6 +163,10 @@ local snippets_by_filetype = {
 			body = '```bash\n$0\n```',
 		},
 		{
+			trigger = 'chtml',
+			body = '```html\n$0\n```',
+		},
+		{
 			trigger = 'cjs',
 			body = '```javascript\n$0\n```',
 		},
