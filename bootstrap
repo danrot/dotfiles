@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 set -l fish_functions ~/.config/fish/functions
+set -l helix_config ~/.config/helix
 set -l nvim_colors ~/.config/nvim/colors
 set -l nvim_snippets ~/.config/nvim/snippets
 
@@ -25,6 +26,13 @@ if [ -d $fish_functions ]
 else
     echo $fish_functions
     ln -s (pwd)/fish/functions $fish_functions
+end
+
+if [ -d $helix_config ]
+	echo $helix_config' already exists'
+else
+	echo $helix_config
+	ln -s (pwd)/helix $helix_config
 end
 
 echo '~/.config/nvim/init.lua'

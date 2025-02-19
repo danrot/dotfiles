@@ -1,0 +1,65 @@
+"ui.background" = {bg = "mineShaft"}
+"ui.linenr" = {fg = "silverChalice"}
+"ui.linenr.selected" = {fg = "white"}
+"ui.menu" = {bg = "emperor"}
+"ui.menu.selected" = {bg = "boulder"}
+"ui.popup" = {bg = "emperor"}
+"ui.selection" = {bg = "boulder"}
+"ui.selection.primary" = {bg = "emperor"}
+"ui.statusline" = {bg = "emperor"}
+"ui.text" = {fg = "white"}
+"ui.text.inactive" = {fg = "silverChalice"}
+"ui.text.focus" = {bg = "emperor"}
+"ui.virtual.jump-label" = {bg = "yellow", fg = "mineShaft", modifiers = ["bold"]}
+"ui.virtual.ruler" = {bg = "emperor"}
+
+"attribute" = {fg = "whiskey"}
+"comment" = {fg = "silverChalice"}
+"constant" = {fg = "viola"}
+"constant.builtin" = {fg = "redDamask"}
+"constant.numeric" = {fg = "bermuda"}
+"function" = {fg = "cornflowerBlue"}
+"keyword" = {fg = "redDamask"}
+"operator" = {fg = "white"}
+"punctuation" = {fg = "white"}
+"string" = {fg = "aquaForest"}
+"tag" = {fg = "whiskey"}
+"type" = {fg = "white"}
+"variable" = {fg = "viola"}
+"variable.builtin" = {fg = "perfume"}
+
+"markup.heading" = {fg = "redDamask"}
+"markup.bold" = {modifiers = ["bold"]}
+"markup.italic" = {modifiers = ["italic"]}
+"markup.strikethrough" = {modifiers = ["crossed_out"]}
+"markup.link.url" = {fg = 'viola'}
+"markup.link.text" = {fg = 'cornflowerBlue'}
+"markup.raw.inline" = {bg = '#000000'}
+
+"diff.plus" = "green"
+"diff.delta" = "yellow"
+"diff.minus" = "red"
+
+"diagnostic.error" = {modifiers = ["underlined"], underline = {color = "red"}}
+"diagnostic.warning" = {modifiers = ["underlined"], underline = {color = "yellow"}}
+"diagnostic.hint" = {modifiers = ["underlined"], underline = {color = "silverChalice"}}
+"error" = {fg = "red"}
+"warning" = {fg = "yellow"}
+"hint" = {fg = "silverChalice"}
+
+[palette]
+aquaForest = "#6AAB73"
+boulder = "#777777"
+bermuda = "#83DDDB"
+cornflowerBlue = "#57AAF7"
+emperor = "#555555"
+green = "#00FF00"
+mineShaft = "#333333"
+perfume = "#CF9FF4"
+red = "#FF0000"
+redDamask = "#DF853A"
+silverChalice = "#AAAAAA"
+viola = "#C77DBB"
+whiskey = "#D5B778"
+white = "#FFFFFF"
+yellow = "#FFFF00"

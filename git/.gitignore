@@ -1,4 +1,5 @@
 .DS_Store
 .envrc
+.helix/
 .phpactor.json
 scratch.*

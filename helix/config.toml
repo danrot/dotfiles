@@ -1,0 +1,24 @@
+theme = "danrot"
+
+[editor]
+auto-format = false
+line-number = "relative"
+mouse = false
+rulers = [121]
+text-width = 121
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+git-global = false
+git-ignore = false
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+mode.insert = "INSERT"
+mode.normal = "NORMAL"
+mode.select = "SELECT"
