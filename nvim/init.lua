@@ -534,11 +534,12 @@ require('mason-lspconfig').setup_handlers {
 	end,
 }
 
+vim.keymap.set('n', 'grn', vim.lsp.buf.rename)
+vim.keymap.set({'n', 'x'}, 'gra', vim.lsp.buf.code_action)
+vim.keymap.set('n', 'grr', vim.lsp.buf.references)
+vim.keymap.set('n', 'gri', vim.lsp.buf.implementation)
+vim.keymap.set('n', 'gO', vim.lsp.buf.document_symbol)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
-vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename)
-vim.keymap.set({'n', 'x'}, '<leader>ca', vim.lsp.buf.code_action)
 
 require('nvim-autopairs').setup()
 require('nvim-ts-autotag').setup()
