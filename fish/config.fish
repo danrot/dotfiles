@@ -35,9 +35,9 @@ source $dotfiles_root/bin/config.fish
 source $dotfiles_root/composer/config.fish
 source $dotfiles_root/direnv/config.fish
 source $dotfiles_root/docker/config.fish
+source $dotfiles_root/helix/config.fish
 source $dotfiles_root/n/config.fish
 source $dotfiles_root/npm/config.fish
-source $dotfiles_root/nvim/config.fish
 source $dotfiles_root/rust/config.fish
 
 set -g fish_user_abbreviations
