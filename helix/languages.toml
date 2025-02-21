@@ -21,6 +21,7 @@ args = [ "language-server", "--config-extra={\"language_server_completion.trim_l
 name = "php"
 language-servers = [ "phpactor" ]
 indent = {tab-width = 4, unit = "\t"}
+block-comment-tokens = {start = "/*", end = "*/"}
 
 [[language]]
 name = "vue"
