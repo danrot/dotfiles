@@ -5,7 +5,7 @@ auto-format = false
 line-number = "relative"
 mouse = false
 rulers = [121]
-text-width = 121
+text-width = 120
 
 [editor.cursor-shape]
 insert = "bar"
