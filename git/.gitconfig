@@ -1,15 +1,5 @@
-[user]
-	email = daniel.rotter@gmail.com
-	name = Daniel Rotter
-
-[tag]
-	sort = -version:refname
-
 [core]
 	excludesfile = ~/.gitignore
-
-[push]
-	autoSetupRemote = true
 
 [fetch]
 	prune = true
@@ -17,10 +7,20 @@
 [merge]
 	conflictStyle = zdiff3
 
+[push]
+	autoSetupRemote = true
+
+[tag]
+	sort = -version:refname
+
+[user]
+	email = daniel.rotter@gmail.com
+	name = Daniel Rotter
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+	smudge = git-lfs smudge -- %f
 	required = true
 
 [IncludeIf "hasconfig:remote.*.url:**Yumpu*/**"]
