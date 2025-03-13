@@ -58,8 +58,9 @@ ln -s (pwd)/git/.gitconfig ~/.gitconfig
 echo '~/.gitconfig-yumpu'
 ln -s (pwd)/git/.gitconfig-yumpu ~/.gitconfig-yumpu
 
-echo '~/.gitignore'
-ln -s (pwd)/git/.gitignore ~/.gitignore
+echo '~/.config/git/ignore'
+mkdir
+ln -s (pwd)/git/.gitignore ~/.config/git/ignore
 
 echo '~/.ackrc'
 ln -s (pwd)/ack/.ackrc ~/.ackrc

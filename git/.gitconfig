@@ -1,11 +1,17 @@
-[core]
-	excludesfile = ~/.gitignore
+[column]
+	ui = auto
+
+[commit]
+	verbose = true
+
+[diff]
+	colorMoved = plain
+	mnemonicPrefix = true
 
 [fetch]
+	all = true
 	prune = true
-
-[merge]
-	conflictStyle = zdiff3
+	pruneTags = true
 
 [push]
 	autoSetupRemote = true
@@ -16,12 +22,6 @@
 [user]
 	email = daniel.rotter@gmail.com
 	name = Daniel Rotter
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	process = git-lfs filter-process
-	smudge = git-lfs smudge -- %f
-	required = true
 
 [IncludeIf "hasconfig:remote.*.url:**Yumpu*/**"]
 	path = .gitconfig-yumpu
