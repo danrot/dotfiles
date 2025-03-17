@@ -5,6 +5,7 @@
 	verbose = true
 
 [diff]
+	algorithm = histogram
 	colorMoved = plain
 	mnemonicPrefix = true
 
