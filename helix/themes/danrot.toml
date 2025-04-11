@@ -12,6 +12,7 @@
 "ui.text.focus" = {bg = "emperor"}
 "ui.virtual.jump-label" = {bg = "yellow", fg = "mineShaft", modifiers = ["bold"]}
 "ui.virtual.ruler" = {bg = "emperor"}
+"ui.virtual.indent-guide" = "emperor"
 
 "attribute" = {fg = "whiskey"}
 "comment" = {fg = "silverChalice"}

@@ -15,6 +15,10 @@ git-global = false
 git-ignore = false
 hidden = false
 
+[editor.indent-guides]
+render = true
+character = "▏"
+
 [editor.soft-wrap]
 enable = true
 
