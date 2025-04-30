@@ -13,6 +13,9 @@ indent = {tab-width = 4, unit = "\t"}
 [[language]]
 name = "json"
 indent = {tab-width = 4, unit = "\t"}
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = [ "package.json" ]
+url = "https://json.schemastore.org/package.json"
 
 [language-server.phpactor]
 command = "phpactor"
