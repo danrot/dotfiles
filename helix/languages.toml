@@ -17,6 +17,10 @@ indent = {tab-width = 4, unit = "\t"}
 fileMatch = [ "package.json" ]
 url = "https://json.schemastore.org/package.json"
 
+[[language]]
+name = "html"
+indent = {tab-width = 4, unit = "\t"}
+
 [language-server.phpactor]
 command = "phpactor"
 args = [ "language-server", "--config-extra={\"language_server_completion.trim_leading_dollar\":true}" ]
