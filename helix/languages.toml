@@ -31,6 +31,10 @@ indent = {tab-width = 4, unit = "\t"}
 block-comment-tokens = {start = "/*", end = "*/"}
 
 [[language]]
+name = "sql"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
 name = "vue"
 indent = {tab-width = 4, unit = "\t"}
 language-servers = ["typescript-language-server"]
