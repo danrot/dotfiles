@@ -46,3 +46,6 @@ languages = ["vue"]
 [[language]]
 name = "yaml"
 indent = {tab-width = 4, unit = "    "}
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://api.bitbucket.org/schemas/pipelines-configuration" = "bitbucket-pipelines.yml"
+"https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "docker-compose.yaml"
