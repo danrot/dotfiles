@@ -44,6 +44,10 @@ location = "/opt/homebrew/lib/node_modules/@vue/language-server/"
 languages = ["vue"]
 
 [[language]]
+name = "xml"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
 name = "yaml"
 indent = {tab-width = 4, unit = "    "}
 [language-server.yaml-language-server.config.yaml.schemas]
