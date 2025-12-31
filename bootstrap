@@ -65,8 +65,5 @@ echo '~/.config/git/ignore'
 mkdir
 ln -s (pwd)/git/.gitignore ~/.config/git/ignore
 
-echo '~/.ackrc'
-ln -s (pwd)/ack/.ackrc ~/.ackrc
-
 echo '~/.editorconfig'
 ln -s (pwd)/nvim/.editorconfig ~/.editorconfig
