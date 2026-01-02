@@ -1,1 +1,0 @@
-add_path_if_not_exists vendor/bin
