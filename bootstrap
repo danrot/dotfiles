@@ -1,69 +1,61 @@
-#!/usr/bin/env fish
+#!/usr/bin/env bash
 
-set -l fish_functions ~/.config/fish/functions
-set -l helix_config ~/.config/helix
-set -l nvim_colors ~/.config/nvim/colors
-set -l nvim_snippets ~/.config/nvim/snippets
+cd $(dirname $BASH_SOURCE)
 
-cd (dirname (status -f))
-pwd
+helix_config=~/.config/helix
+nvim_colors=~/.config/nvim/colors
+nvim_snippets=~/.config/nvim/snippets
 
 echo 'Creating symlinks...'
 echo ''
 
+echo '~/.bash_profile'
+ln -s $(pwd)/bash/bash_profile.sh ~/.bash_profile
+
 echo '~/.config/kitty/kitty.conf'
 mkdir ~/.config/kitty
-ln -s (pwd)/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -s $(pwd)/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 echo '~/.config/kitty/ssh.conf'
-ln -s (pwd)/kitty/ssh.conf ~/.config/kitty/ssh.conf
+ln -s $(pwd)/kitty/ssh.conf ~/.config/kitty/ssh.conf
 
 echo '~/.config/kitty/themes'
-ln -s (pwd)/kitty/themes ~/.config/kitty/themes
+ln -s $(pwd)/kitty/themes ~/.config/kitty/themes
 
-echo '~/.config/fish/config.fish'
-ln -s (pwd)/fish/config.fish ~/.config/fish/config.fish
-
-if [ -d $fish_functions ]
-    echo $fish_functions ' already exists'
-else
-    echo $fish_functions
-    ln -s (pwd)/fish/functions $fish_functions
-end
-
-if [ -d $helix_config ]
-	echo $helix_config' already exists'
+if [ -d $helix_config ]; then
+	echo "$helix_config already exists"
 else
 	echo $helix_config
-	ln -s (pwd)/helix $helix_config
-end
+	ln -s $(pwd)/helix $helix_config
+fi
 
 echo '~/.config/nvim/init.lua'
-ln -s (pwd)/nvim/init.lua ~/.config/nvim/init.lua
+ln -s $(pwd)/nvim/init.lua ~/.config/nvim/init.lua
 
-if [ -d $nvim_colors ]
-	echo $nvim_colors ' already exists'
+if [ -d $nvim_colors ]; then
+	echo "$nvim_colors  already exists"
 else
 	echo $nvim_colors
-	ln -s (pwd)/nvim/colors $nvim_colors
-end
+	ln -s $(pwd)/nvim/colors $nvim_colors
+fi
 
-if [ -d $nvim_snippets ]
-	echo $nvim_snippets ' already exists'
+if [ -d $nvim_snippets ]; then
+	echo "$nvim_snippets already exists"
 else
 	echo $nvim_snippets
-	ln -s (pwd)/nvim/snippets $nvim_snippets
-end
+	ln -s $(pwd)/nvim/snippets $nvim_snippets
+fi
 
 echo '~/.gitconfig'
-ln -s (pwd)/git/.gitconfig ~/.gitconfig
+ln -s $(pwd)/git/.gitconfig ~/.gitconfig
 
 echo '~/.gitconfig-yumpu'
-ln -s (pwd)/git/.gitconfig-yumpu ~/.gitconfig-yumpu
+ln -s $(pwd)/git/.gitconfig-yumpu ~/.gitconfig-yumpu
 
 echo '~/.config/git/ignore'
-mkdir
-ln -s (pwd)/git/.gitignore ~/.config/git/ignore
+ln -s $(pwd)/git/.gitignore ~/.config/git/ignore
 
 echo '~/.editorconfig'
-ln -s (pwd)/nvim/.editorconfig ~/.editorconfig
+ln -s $(pwd)/nvim/.editorconfig ~/.editorconfig
+
+exit 0

@@ -1,0 +1,6 @@
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias dcu='docker compose up'
+alias dce='docker compose exec'
+alias dcr='docker compose run'
+alias dcepf='docker compose exec php-fpm'

@@ -1,0 +1,1 @@
+export COMPOSE_MENU=0
