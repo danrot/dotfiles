@@ -1,4 +1,4 @@
-export CDPATH=~/Documents/Development/YumpuNew/:~/Documents/Development/Yumpu/:~/Documents/Development/Personal/
+export CDPATH=~/Development/omicron/
 HISTCONTROL=erasedups:ignorespace
 HISTSIZE=
 HISTFILESIZE=

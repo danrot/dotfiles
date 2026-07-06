@@ -49,8 +49,8 @@ fi
 echo '~/.gitconfig'
 ln -s $(pwd)/git/.gitconfig ~/.gitconfig
 
-echo '~/.gitconfig-yumpu'
-ln -s $(pwd)/git/.gitconfig-yumpu ~/.gitconfig-yumpu
+echo '~/.gitconfig-omicron'
+ln -s $(pwd)/git/.gitconfig-omicron ~/.gitconfig-omicron
 
 echo '~/.config/git/ignore'
 ln -s $(pwd)/git/.gitignore ~/.config/git/ignore

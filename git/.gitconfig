@@ -27,5 +27,5 @@
 	email = daniel.rotter@gmail.com
 	name = Daniel Rotter
 
-[IncludeIf "hasconfig:remote.*.url:**Yumpu*/**"]
-	path = .gitconfig-yumpu
+[IncludeIf "hasconfig:remote.*.url:**omicron*/**"]
+	path = .gitconfig-omicron
