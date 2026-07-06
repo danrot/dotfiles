@@ -12,10 +12,6 @@ alias ls='ls --color=auto'
 
 dotfiles_root=$(dirname $(dirname $(readlink $BASH_SOURCE)))
 
-if [ $(uname) = "Darwin" ]; then
-	source $dotfiles_root/mac/config.sh
-fi
-
 source $dotfiles_root/bin/config.sh
 source $dotfiles_root/direnv/config.sh
 source $dotfiles_root/docker/aliases.sh
