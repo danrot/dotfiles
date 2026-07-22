@@ -1,4 +1,4 @@
-export CDPATH=~/Development/omicron/
+export CDPATH=~/Development/omicron/:~/Development/personal/
 HISTCONTROL=erasedups:ignorespace
 HISTSIZE=
 HISTFILESIZE=
