@@ -21,27 +21,9 @@ url = "https://json.schemastore.org/package.json"
 name = "html"
 indent = {tab-width = 4, unit = "\t"}
 
-[language-server.phpactor]
-command = "phpactor"
-args = [ "language-server", "--config-extra={\"language_server_completion.trim_leading_dollar\":true}" ]
-[[language]]
-name = "php"
-language-servers = [ "phpactor" ]
-indent = {tab-width = 4, unit = "\t"}
-block-comment-tokens = {start = "/*", end = "*/"}
-
 [[language]]
 name = "sql"
 indent = {tab-width = 4, unit = "\t"}
-
-[[language]]
-name = "vue"
-indent = {tab-width = 4, unit = "\t"}
-language-servers = ["typescript-language-server"]
-[[language-server.typescript-language-server.config.plugins]]
-name = "@vue/typescript-plugin"
-location = "/opt/homebrew/lib/node_modules/@vue/language-server/"
-languages = ["vue"]
 
 [[language]]
 name = "xml"
