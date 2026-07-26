@@ -9,6 +9,7 @@ indent = {tab-width = 4, unit = "\t"}
 [[language]]
 name = "javascript"
 indent = {tab-width = 4, unit = "\t"}
+language-servers = ["deno-lsp"]
 
 [[language]]
 name = "json"
@@ -26,6 +27,10 @@ name = "sql"
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
+name = "typescript"
+language-servers = ["deno-lsp"]
+
+[[language]]
 name = "xml"
 indent = {tab-width = 4, unit = "\t"}
 
@@ -35,3 +40,8 @@ indent = {tab-width = 4, unit = "    "}
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://api.bitbucket.org/schemas/pipelines-configuration" = "bitbucket-pipelines.yml"
 "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "docker-compose.yaml"
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
