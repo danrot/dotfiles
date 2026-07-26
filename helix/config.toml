@@ -1,6 +1,7 @@
 theme = "danrot"
 
 [editor]
+atomic-save = false
 auto-format = false
 line-number = "relative"
 mouse = false
