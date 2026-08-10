@@ -38,8 +38,17 @@ indent = {tab-width = 4, unit = "\t"}
 name = "yaml"
 indent = {tab-width = 4, unit = "    "}
 [language-server.yaml-language-server.config.yaml.schemas]
-"https://api.bitbucket.org/schemas/pipelines-configuration" = "bitbucket-pipelines.yml"
-"https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "docker-compose.yaml"
+"https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json" = ".gitlab-ci.yml"
+"https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = [
+	"compose.yaml",
+	"compose.yml",
+	"compose.override.yaml",
+	"compose.override.yml",
+	"docker-compose.yaml",
+	"docker-compose.yml",
+	"docker-compose.override.yaml",
+	"docker-compose.override.yml",
+]
 
 [language-server.deno-lsp]
 command = "deno"
