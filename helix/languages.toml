@@ -15,8 +15,11 @@ language-servers = ["deno-lsp"]
 name = "json"
 indent = {tab-width = 4, unit = "\t"}
 [[language-server.vscode-json-language-server.config.json.schemas]]
-fileMatch = [ "package.json" ]
+fileMatch = ["package.json"]
 url = "https://json.schemastore.org/package.json"
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["deno.json"]
+url = "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
 
 [[language]]
 name = "html"
