@@ -1,1 +1,1 @@
-PATH="~/.deno/bin:$PATH"
+PATH="$HOME/.deno/bin:$PATH"
