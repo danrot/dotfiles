@@ -1,4 +1,6 @@
 export CDPATH=~/Development/omicron/:~/Development/personal/
+
+shopt -s histappend
 HISTCONTROL=erasedups:ignorespace
 HISTSIZE=
 HISTFILESIZE=
