@@ -40,6 +40,8 @@ indent = {tab-width = 4, unit = "\t"}
 [[language]]
 name = "yaml"
 indent = {tab-width = 4, unit = "    "}
+[language-server.yaml-language-server.config.yaml]
+customTags = ["!reset"]
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json" = ".gitlab-ci.yml"
 "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = [
